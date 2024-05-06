@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+<!-- This group sets version used packages in FastReport.Core, FastReport.OpenSource, FastReport.CoreWin, FastReport.WPF -->
+    <PropertyGroup>
+
+        <FRCompatVersionNET>[2023.3.1]</FRCompatVersionNET>
+
+        <FRCompatVersion>[2023.3.1]</FRCompatVersion>
+        <FRCompatSkiaVersion>[2023.3.4]</FRCompatSkiaVersion>
+
+        <FRDataVisualizationVersion>[2023.3.0]</FRDataVisualizationVersion>
+        <FRDataVisualizationSkiaVersion>[2023.3.4]</FRDataVisualizationSkiaVersion>
+		
+        <!-- WPF -->
+        <FRWPFVersion>2023.3.0</FRWPFVersion>
+        <FRWPFRoslynPadVersion>2023.3.0</FRWPFRoslynPadVersion>
+        <FRFormsWPFVersion>2023.2.1</FRFormsWPFVersion>
+        <FRCompatWPFVersion>2023.3.1</FRCompatWPFVersion>
+        <FRDataVisualizationWPFVersion>2023.3.0</FRDataVisualizationWPFVersion>
+
+        <!-- Not available in Core3 -->
+        <SystemDrawingCommonVersion>[4.7.0,)</SystemDrawingCommonVersion>
+
+        <!-- Not available in Core3 -->
+        <SystemSecurityPermissionsVersion>[4.5.0,)</SystemSecurityPermissionsVersion>
+        
+        <!-- Not available in Core3 -->
+        <SystemSecurityCryptographyPkcsVersion>4.7.0</SystemSecurityCryptographyPkcsVersion>
+
+        <!-- Not available in Core3 -->
+        <SystemTextEncodingCodePagesVersion>4.7.0</SystemTextEncodingCodePagesVersion>
+
+        <!-- Not available in Core3 -->
+        <MicrosoftCSharpVersion>4.7.0</MicrosoftCSharpVersion>
+
+        <!-- Not available in Core3 -->
+        <SystemReflectionEmitLightweightVersion>4.7.0</SystemReflectionEmitLightweightVersion>
+
+    </PropertyGroup>
+	
+<!-- This group sets version used packages in Demos -->
+	<PropertyGroup>
+        
+		<FRCoreVersion>2023.2.17</FRCoreVersion>
+		
+		<FRCoreWebVersion>2023.2.17</FRCoreWebVersion>
+		
+		<FROSVersion>2023.2.16</FROSVersion>
+		
+		<FROSWebVersion>2023.2.16</FROSWebVersion>
+		
+    </PropertyGroup>
+
+</Project>

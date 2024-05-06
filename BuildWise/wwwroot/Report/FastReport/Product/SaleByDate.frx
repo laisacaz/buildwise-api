@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="11/15/2023 00:33:37" ReportInfo.Modified="11/15/2023 00:35:59" ReportInfo.CreatorVersion="2023.3.11.0">
+  <Dictionary>
+    <JsonDataSourceConnection Name="Connection" ConnectionString="rijcmlqRBvCMPukEs4W4alFgjEirMRsAzzOoGSYFIz5KA90kERGh4B37jUFmMYsXbl4pzr/MA9+idTr2K2TnKXIG7fe77/3pmyH4kth3dzWOvb0/5FuhWlJC3MiPMIbDYCZd9JoTp8UTPh2k01+4b6AjiMU1XsonPnaE6oGhZfjrlNZ/y43/INrXrONkQro3x0wYvBgaksyaVcZQ7d8WCUh6TcePWlXu6MdzkmoSyhxsVi1WYY7q4Cu3LFx8hD4MHUNAhh9hlMT0YysaBDiKE4NozEjK4d7NHgbWmySB0DeO/+WyglRkwxJSIDPI9YqGl8mjo42hPNrUNEGD8HRjhZa8HEpCqkJrTWZVUvJYttJMzFgIkYO+1WGetxJBTwVNcGLNR5Jj5xBFKj3R1sMQiVn2nS9m6H7w8Qcek3jKMHLQos/2tZ/IbsXuE836rUUl5Sejrrk8pCIXUzEhBfHLJvjV/pVtHIgKVN9hSLLL1XTgqsmEd5baFcIRl8fwTRXhIJXl6vARXAnoE+hU+RkLCSLwaOiU/Mo1H8Efmsaw+U3mJBcH7DeJQ/O8FB79l6nTs3771Iz7jVb7qvsNTusp88Bd16nxhRwnJCrgJFhDIdXHZvuT7Kl/T4P0lvsb3aQ0MaEef41srMvF4AF2DWxXm6jGPzbLwmqf95+JoyYXiDTQ3M8lC4koLhDJ0fzVqfnbzi4u9gBnoeoObRc0A11cunax5VY+kB8LWrfFUp98rYWOzPVZO1oOwiG4nKtvL6scGIXQPH/VH2aggKayfNCEd1Pk+kPJ4gEGA2bo5KK1qMC0m+syx+nGawg49KRkekksNrf7VMVriCs6smE1kMff9Ph5Lb16lmVFVc3sXNqX5lXLhY0TRqTy0vZRaCnCRLyA/4dZdn/">
+      <JsonTableDataSource Name="JSON" DataType="FastReport.Utils.Json.JsonArray" Enabled="true" TableName="JSON">
+        <Column Name="index" DataType="System.Int32"/>
+        <Column Name="item" DataType="FastReport.JsonBase">
+          <JsonTableDataSource Name="data" DataType="FastReport.JsonBase" Enabled="true">
+            <Column Name="index" DataType="System.Int32"/>
+            <Column Name="item" DataType="FastReport.JsonBase">
+              <Column Name="id" DataType="System.Double"/>
+              <Column Name="reference" DataType="System.String"/>
+              <Column Name="description" DataType="System.String"/>
+              <Column Name="price" DataType="System.Double"/>
+              <Column Name="stockQuantity" DataType="System.Double"/>
+            </Column>
+            <Column Name="array" DataType="FastReport.JsonBase"/>
+          </JsonTableDataSource>
+          <Column Name="totalRecords" DataType="System.Double"/>
+          <Column Name="pageNumber" DataType="System.Double"/>
+          <Column Name="pageSize" DataType="System.Double"/>
+          <Column Name="totalPages" DataType="System.Double"/>
+        </Column>
+        <Column Name="array" DataType="FastReport.JsonBase"/>
+      </JsonTableDataSource>
+    </JsonDataSourceConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8"/>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35">
+      <TextObject Name="Text2" Left="103.95" Width="94.5" Height="18.9" Text="reference" Font="Arial, 10pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="74.15" Width="718.2" Height="75.6" DataSource="data">
+      <TextObject Name="Text1" Left="103.95" Top="9.45" Width="94.5" Height="18.9" Text="[JSON.item.data.item.reference]" Font="Arial, 10pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="153.75" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

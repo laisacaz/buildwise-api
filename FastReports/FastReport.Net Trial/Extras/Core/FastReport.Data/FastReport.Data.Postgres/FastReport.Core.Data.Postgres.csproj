@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>$(NetFrameworkMinimum);netstandard2.0;netcoreapp3.1</TargetFrameworks>
+    <Crossplatform>true</Crossplatform>
+  </PropertyGroup>
+  
+  <Import Project="Shared.props" />
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\FastReport.Core\FastReport.Core.csproj" />
+  </ItemGroup>
+</Project>
