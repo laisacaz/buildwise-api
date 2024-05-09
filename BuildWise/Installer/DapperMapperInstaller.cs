@@ -20,7 +20,7 @@ namespace BuildWise.Installer
                 config.AddMap(new ConstructionMapper());
                 config.AddMap(new SaleProductMapper());
                 config.AddMap(new SaleMapper());
-                config.AddMap(new ServiceMapper());
+                config.AddMap(new ServiceOrderMapper());
                 config.ForDommel();
             });
 

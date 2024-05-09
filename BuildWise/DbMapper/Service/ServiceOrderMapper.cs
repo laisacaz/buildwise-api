@@ -2,9 +2,9 @@
 
 namespace BuildWise.DbMapper.Service
 {
-    public class ServiceMapper : DommelEntityMap<Entities.ServiceOrder>
+    public class ServiceOrderMapper : DommelEntityMap<Entities.ServiceOrder>
     {
-        public ServiceMapper()
+        public ServiceOrderMapper()
         {
             ToTable("se_service");
             Map(x => x.Id)

@@ -5,12 +5,14 @@ using BuildWise.Payload.Person;
 using BuildWise.Payload.Product;
 using BuildWise.Payload.Report;
 using BuildWise.Payload.Sale;
+using BuildWise.Payload.Service;
 using BuildWise.Services.Command.Product;
 using BuildWise.Validator.Construction;
 using BuildWise.Validator.Person;
 using BuildWise.Validator.Product;
 using BuildWise.Validator.Report;
 using BuildWise.Validator.Sale;
+using BuildWise.Validator.ServiceOrder;
 using FluentValidation;
 using Microsoft.AspNetCore.Identity;
 
@@ -40,6 +42,7 @@ namespace BuildWise.Installer
             services.AddScoped<IValidator<SaleFinishPayload>, SaleFinishPayloadValidator>();            
             services.AddScoped<IValidator<SaleProductInsertPayload>, SaleProductInsertPayloadValidator>();            
             services.AddScoped<IValidator<SaleProductUpdatePayload>, SaleProductUpdatePayloadValidator>();          
+            services.AddScoped<IValidator<ServiceOrderInsertPayload>, ServiceOrderInsertPayloadValidator>();          
         }
     }
 }
