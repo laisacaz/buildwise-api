@@ -4,6 +4,7 @@ using BuildWise.Interfaces.Repository.Construction;
 using BuildWise.Interfaces.Repository.Person;
 using BuildWise.Interfaces.Repository.Product;
 using BuildWise.Interfaces.Repository.Sale;
+using BuildWise.Interfaces.Repository.ServiceOrder;
 
 namespace BuildWise.Repository
 {
@@ -23,6 +24,7 @@ namespace BuildWise.Repository
         public IPersonRepository Person => _serviceProvider.GetRequiredService<IPersonRepository>();
         public IConstructionRepository Construction => _serviceProvider.GetRequiredService<IConstructionRepository>();
         public ISaleRepository Sale => _serviceProvider.GetRequiredService<ISaleRepository>();
+        public IServiceOrderRepository ServiceOrder => _serviceProvider.GetRequiredService<IServiceOrderRepository>();
 
         public IBaseConnection Conn => _conn;
         public void Dispose()
