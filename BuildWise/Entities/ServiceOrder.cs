@@ -2,7 +2,7 @@
 
 namespace BuildWise.Entities
 {
-    public class Service
+    public class ServiceOrder
     {
         public int Id { get; set; } 
         public DateTime CreatedAt { get; set; }

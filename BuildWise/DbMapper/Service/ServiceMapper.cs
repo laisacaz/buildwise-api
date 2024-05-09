@@ -2,7 +2,7 @@
 
 namespace BuildWise.DbMapper.Service
 {
-    public class ServiceMapper : DommelEntityMap<Entities.Service>
+    public class ServiceMapper : DommelEntityMap<Entities.ServiceOrder>
     {
         public ServiceMapper()
         {
