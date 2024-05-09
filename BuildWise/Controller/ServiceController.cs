@@ -1,5 +1,7 @@
 ﻿using BuildWise.Payload.Sale;
+using BuildWise.Payload.Service;
 using BuildWise.Services.Command.Sale;
+using BuildWise.Services.Command.Service;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,10 +20,10 @@ namespace BuildWise.Controller
     [HttpPost]
     [Route("")]
     public async Task<ActionResult<int>> Insert(
-    [FromBody] SaleInsertPayload payload)
+    [FromBody] ServiceInsertPayload payload)
 
     {
-        SaleInsertCommand command = new SaleInsertCommand(payload);
+        ServiceInsertCommand command = new ServiceInsertCommand(payload);
         int id = await _mediator.Send(command);
         return Ok(id);
     }
