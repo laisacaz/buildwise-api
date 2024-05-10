@@ -12,17 +12,17 @@ namespace BuildWise.Services.Command.ServiceOrder
     {
         public ServiceOrderDeleteCommand(int id)
         {
-            Payload = new ServiceDeletePayload { Id = id };
+            Payload = new ServiceOrderDeletePayload { Id = id };
         }
-        public ServiceDeletePayload Payload { get; set; }
+        public ServiceOrderDeletePayload Payload { get; set; }
     }
     internal class ServiceOrderDeleteCommandHandler : IRequestHandler<ServiceOrderDeleteCommand, Unit>
     {
         private readonly IUnitOfWork _uow;
-        private readonly IValidator<ServiceDeletePayload> _validator;
+        private readonly IValidator<ServiceOrderDeletePayload> _validator;
         public ServiceOrderDeleteCommandHandler(
             IUnitOfWork uow,
-            IValidator<ServiceDeletePayload> validator)
+            IValidator<ServiceOrderDeletePayload> validator)
         {
             _uow = uow;
             _validator = validator;

@@ -1,6 +1,6 @@
 ﻿namespace BuildWise.Payload.ServiceOrder
 {
-    public class ServiceDeletePayload
+    public class ServiceOrderDeletePayload
     {
         public int Id { get; set; }
     }

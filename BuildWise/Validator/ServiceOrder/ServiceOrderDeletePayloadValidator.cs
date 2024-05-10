@@ -5,9 +5,9 @@ using FluentValidation;
 
 namespace BuildWise.Validator.ServiceOrder
 {
-    public class ServiceDeletePayloadValidator : AbstractValidator<ServiceDeletePayload>
+    public class ServiceOrderDeletePayloadValidator : AbstractValidator<ServiceOrderDeletePayload>
     {
-        public ServiceDeletePayloadValidator(IUnitOfWork uow)
+        public ServiceOrderDeletePayloadValidator(IUnitOfWork uow)
         {
             RuleFor(x => x.Id)
              .GreaterThan(0)
