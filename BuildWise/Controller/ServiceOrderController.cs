@@ -2,7 +2,6 @@
 using BuildWise.DTO;
 using BuildWise.Payload.Product;
 using BuildWise.Payload.Sale;
-using BuildWise.Payload.Service;
 using BuildWise.Services.Command.Sale;
 using BuildWise.Services.Command.Service;
 using BuildWise.Services.Query.Product;
@@ -11,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using BuildWise.Services.Query.ServiceOrder;
 using BuildWise.DTO.ServiceOrder;
 using BuildWise.Payload.ServiceOrder;
+using BuildWise.Services.Command.Product;
+using BuildWise.Services.Command.ServiceOrder;
 
 namespace BuildWise.Controller
 {
@@ -34,6 +35,27 @@ namespace BuildWise.Controller
             int id = await _mediator.Send(command);
             return Ok(id);
         }
+        [HttpPut]
+        [Route("{id:int}")]
+        public async Task<ActionResult> Update(
+         [FromRoute(Name = "id")] int serviceId,
+         [FromBody] ServiceOrderUpdatePayload payload)
+        {
+            ServiceOrderUpdateCommand command = new ServiceOrderUpdateCommand(serviceId, payload);
+            await _mediator.Send(command);
+            return Ok();
+        }
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public async Task<ActionResult<Entities.Product>> GetById(
+            [FromRoute(Name = "id")] int productId)
+        {
+            ProductGetByIdQuery query = new ProductGetByIdQuery(productId);
+            Entities.Product product = await _mediator.Send(query);
+            return Ok(product);
+        }
+
         [HttpGet]
         [Route("search")]
         public async Task<ActionResult<BasePagedSearchDTO<ServiceOrderPagedSearchDTO>>> Search(

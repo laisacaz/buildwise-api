@@ -1,4 +1,4 @@
-﻿namespace BuildWise.Payload.Service
+﻿namespace BuildWise.Payload.ServiceOrder
 {
     public class ServiceOrderInsertPayload
     {

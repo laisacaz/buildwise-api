@@ -2,7 +2,7 @@
 using BuildWise.Extensions;
 using BuildWise.Interfaces.Repository;
 using BuildWise.Payload.Product;
-using BuildWise.Payload.Service;
+using BuildWise.Payload.ServiceOrder;
 using FluentValidation;
 using MediatR;
 

@@ -1,4 +1,4 @@
-﻿using BuildWise.Payload.Service;
+﻿using BuildWise.Payload.ServiceOrder;
 using FluentValidation;
 
 namespace BuildWise.Validator.ServiceOrder

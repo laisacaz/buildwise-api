@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using BuildWise.Payload.Construction;
-using BuildWise.Payload.Service;
+using BuildWise.Payload.ServiceOrder;
 
 namespace BuildWise.AutoMapper.ServiceOrder
 {
@@ -9,6 +9,7 @@ namespace BuildWise.AutoMapper.ServiceOrder
         public ServiceOrderMap()
         {
             CreateMap<ServiceOrderInsertPayload, Entities.ServiceOrder>();
+            CreateMap<ServiceOrderUpdatePayload, Entities.ServiceOrder>();
         }
     }
 }

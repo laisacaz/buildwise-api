@@ -5,7 +5,7 @@ using BuildWise.Payload.Person;
 using BuildWise.Payload.Product;
 using BuildWise.Payload.Report;
 using BuildWise.Payload.Sale;
-using BuildWise.Payload.Service;
+using BuildWise.Payload.ServiceOrder;
 using BuildWise.Services.Command.Product;
 using BuildWise.Validator.Construction;
 using BuildWise.Validator.Person;
@@ -43,6 +43,7 @@ namespace BuildWise.Installer
             services.AddScoped<IValidator<SaleProductInsertPayload>, SaleProductInsertPayloadValidator>();            
             services.AddScoped<IValidator<SaleProductUpdatePayload>, SaleProductUpdatePayloadValidator>();          
             services.AddScoped<IValidator<ServiceOrderInsertPayload>, ServiceOrderInsertPayloadValidator>();          
+            services.AddScoped<IValidator<ServiceOrderUpdatePayload>, ServiceOrderUpdatePayloadValidator>();          
         }
     }
 }
