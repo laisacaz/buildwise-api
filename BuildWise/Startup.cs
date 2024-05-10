@@ -11,6 +11,7 @@ using BuildWise.Repository.Construction;
 using BuildWise.Repository.Person;
 using BuildWise.Repository.Product;
 using BuildWise.Repository.Sale;
+using BuildWise.Repository.ServiceOrder;
 using BuildWise.Services.Service.Report;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 using Microsoft.OpenApi.Models;
@@ -81,6 +82,7 @@ namespace BuildWise
             services.AddScoped<Interfaces.Repository.Construction.IConstructionRepository, ConstructionRepository>();
             services.AddScoped<IReportService, OpenFastReportService>();
             services.AddScoped<Interfaces.Repository.Sale.ISaleRepository, SaleRepository>();
+            services.AddScoped<Interfaces.Repository.ServiceOrder.IServiceOrderRepository, ServiceOrderRepository>();
             services.InstallValidators();
         }
     }
