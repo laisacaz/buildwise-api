@@ -66,5 +66,14 @@ namespace BuildWise.Controller
             return Ok(products);
         }
 
+        [HttpPut]
+        [Route("delete/{id:int}")]
+        public async Task<ActionResult> Delete(
+            [FromRoute(Name = "id")] int serviceId)
+        {
+            ServiceOrderDeleteCommand command = new ServiceOrderDeleteCommand(serviceId);
+            await _mediator.Send(command);
+            return Ok();
+        }
     }
 }
