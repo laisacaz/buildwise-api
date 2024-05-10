@@ -39,6 +39,7 @@ namespace BuildWise.Services.Command.ServiceOrder
             Entities.ServiceOrder oldServiceOrder = await _uow.ServiceOrder.GetByIdAsync(request.Payload.GetId());
             Entities.ServiceOrder serviceOrder = _mapper.Map<Entities.ServiceOrder>(request.Payload);
             serviceOrder.CreatedAt = oldServiceOrder.CreatedAt;
+            serviceOrder.Status = oldServiceOrder.Status;
 
             await _uow.ServiceOrder.UpdateAsync(serviceOrder);
 

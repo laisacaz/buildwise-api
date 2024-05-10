@@ -48,12 +48,12 @@ namespace BuildWise.Controller
 
         [HttpGet]
         [Route("{id:int}")]
-        public async Task<ActionResult<Entities.Product>> GetById(
-            [FromRoute(Name = "id")] int productId)
+        public async Task<ActionResult<Entities.ServiceOrder>> GetById(
+            [FromRoute(Name = "id")] int serviceId)
         {
-            ProductGetByIdQuery query = new ProductGetByIdQuery(productId);
-            Entities.Product product = await _mediator.Send(query);
-            return Ok(product);
+            ServiceOrderGetQuery query = new ServiceOrderGetQuery(serviceId);
+            Entities.ServiceOrder serviceOrder = await _mediator.Send(query);
+            return Ok(serviceOrder);
         }
 
         [HttpGet]
