@@ -13,5 +13,13 @@ namespace BuildWise.Interface.DbConnection
         Task RollbackAsync();
 
         Task StartTransactionAsync();
+
+        public interface IPublicConnection : IBaseConnection
+        {
+        }
+
+        public interface IClientConnection : IBaseConnection
+        {
+        }
     }
 }

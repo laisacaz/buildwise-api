@@ -5,15 +5,16 @@ using BuildWise.Interfaces.Repository.Person;
 using BuildWise.Interfaces.Repository.Product;
 using BuildWise.Interfaces.Repository.Sale;
 using BuildWise.Interfaces.Repository.ServiceOrder;
+using static BuildWise.Interface.DbConnection.IBaseConnection;
 
 namespace BuildWise.Repository
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly IBaseConnection _conn;
+        private readonly IClientConnection _conn;
         private readonly IServiceProvider _serviceProvider;
         public UnitOfWork(
-            IBaseConnection conn, 
+            IClientConnection conn, 
             IServiceProvider serviceProvider)
         {
             _conn = conn;
@@ -26,7 +27,7 @@ namespace BuildWise.Repository
         public ISaleRepository Sale => _serviceProvider.GetRequiredService<ISaleRepository>();
         public IServiceOrderRepository ServiceOrder => _serviceProvider.GetRequiredService<IServiceOrderRepository>();
 
-        public IBaseConnection Conn => _conn;
+        public IClientConnection Conn => _conn;
         public void Dispose()
         {
             GC.SuppressFinalize(this);

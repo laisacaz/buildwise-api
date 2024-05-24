@@ -44,7 +44,8 @@
   <ItemGroup>
     <Folder Include="Interfaces\Repository\NovaPasta\" />
     <Folder Include="MiddlewareException\" />
-    <Folder Include="Payload\User\" />
+    <Folder Include="Repository\User\" />
+    <Folder Include="Services\Service\User\" />
     <Folder Include="Validator\Address\" />
   </ItemGroup>
 
