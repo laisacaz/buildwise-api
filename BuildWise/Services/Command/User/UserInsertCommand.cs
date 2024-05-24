@@ -1,4 +1,9 @@
-﻿using BuildWise.Payload.User;
+﻿using AutoMapper;
+using BuildWise.Extensions;
+using BuildWise.Interfaces.Repository;
+using BuildWise.Payload.ServiceOrder;
+using BuildWise.Payload.User;
+using FluentValidation;
 using MediatR;
 
 namespace BuildWise.Services.Command.User
@@ -14,13 +19,27 @@ namespace BuildWise.Services.Command.User
     }
     internal class UserInsertCommandHandler : IRequestHandler<UserInsertCommand, int> 
     {
-        public UserInsertCommandHandler()
+        private readonly IPublicUnitOfWork _puow;
+        private readonly IMapper _mapper;
+        private readonly IValidator<UserInsertPayload> _validator;
+        public UserInsertCommandHandler(
+            IPublicUnitOfWork puow,
+            IMapper mapper,
+            IValidator<UserInsertPayload> validator)
         {
-            
+            _puow = puow;
+            _mapper = mapper;
+            _validator = validator;
         }
-        public async Task<int> Handle(UserInsertCommand command, CancellationToken cancellationToken)
+        public async Task<int> Handle(UserInsertCommand request, CancellationToken cancellationToken)
         {
-            return 0;
+            FluentValidation.Results.ValidationResult result = await _validator.ValidateAsync(request.Payload);
+            result.ThrowExceptionIfNotValid();
+
+            Entities.User user = _mapper.Map<Entities.User>(request.Payload);
+            user.CreatedAt = DateTime.UtcNow;
+            int id = await _puow.User.InsertAsync(user);
+            return id;
         }
     }
 }

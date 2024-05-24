@@ -9,16 +9,16 @@ using Dapper;
 using static BuildWise.Enum.ProductEnum;
 using static Dapper.SqlMapper;
 using BuildWise.DTO.ServiceOrder;
+using static BuildWise.Interface.DbConnection.IBaseConnection;
 
 namespace BuildWise.Repository.ServiceOrder
 {
     public class ServiceOrderRepository : BaseRepository<Entities.ServiceOrder>, IServiceOrderRepository
     {
-        private readonly IBaseConnection _conn;
+        private readonly IClientConnection _conn;
 
         public ServiceOrderRepository(
-            IBaseConnection conn,
-            IUnitOfWork uow) : base(conn.GetConnection(), conn.GetTransaction())
+            IClientConnection conn) : base(conn.GetConnection(), conn.GetTransaction())
         {
             _conn = conn;
         }

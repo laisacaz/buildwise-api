@@ -12,17 +12,18 @@ using BuildWise.Repository.Construction;
 using Dapper;
 using static BuildWise.Enum.ConstructionEnum;
 using static BuildWise.Enum.SaleEnum;
+using static BuildWise.Interface.DbConnection.IBaseConnection;
 using static Dapper.SqlMapper;
 
 namespace BuildWise.Repository.Sale
 {
     public class SaleRepository : BaseRepository<Entities.Sale>, ISaleRepository
     {
-        private readonly IBaseConnection _conn;
+        private readonly IClientConnection _conn;
         private readonly IUnitOfWork _uow;
 
         public SaleRepository(
-            IBaseConnection conn,
+            IClientConnection conn,
              IUnitOfWork uow) : base(conn.GetConnection(), conn.GetTransaction())
         {
             _conn = conn;

@@ -9,16 +9,17 @@ using BuildWise.Interfaces.Repository.Product;
 using Dapper;
 using System.Collections.Generic;
 using static BuildWise.Enums.PersonEnum;
+using static BuildWise.Interface.DbConnection.IBaseConnection;
 using static Dapper.SqlMapper;
 
 namespace BuildWise.Repository.Person
 {
     public class PersonRepository : BaseRepository<Entities.Person>, IPersonRepository
     {
-        private readonly IBaseConnection _conn;
+        private readonly IClientConnection _conn;
         private readonly IUnitOfWork _uow;
 
-        public PersonRepository(IBaseConnection conn,
+        public PersonRepository(IClientConnection conn,
              IUnitOfWork uow) : base(conn.GetConnection(), conn.GetTransaction())
         {
             _conn = conn;

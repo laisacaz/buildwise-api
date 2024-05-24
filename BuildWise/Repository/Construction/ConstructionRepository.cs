@@ -8,15 +8,16 @@ using BuildWise.Interfaces.Repository.Construction;
 using Dapper;
 using System.Drawing.Drawing2D;
 using static BuildWise.Enum.ConstructionEnum;
+using static BuildWise.Interface.DbConnection.IBaseConnection;
 using static Dapper.SqlMapper;
 
 namespace BuildWise.Repository.Construction
 {
     public class ConstructionRepository : BaseRepository<Entities.Construction>, IConstructionRepository
     {
-        private readonly IBaseConnection _conn;
+        private readonly IClientConnection _conn;
 
-        public ConstructionRepository(IBaseConnection conn) : base(conn.GetConnection(), conn.GetTransaction())
+        public ConstructionRepository(IClientConnection conn) : base(conn.GetConnection(), conn.GetTransaction())
         {
             _conn = conn;
         }

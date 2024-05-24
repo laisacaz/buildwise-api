@@ -6,15 +6,16 @@ using BuildWise.Interfaces.Repository;
 using BuildWise.Interfaces.Repository.Product;
 using Dapper;
 using static BuildWise.Enum.ProductEnum;
+using static BuildWise.Interface.DbConnection.IBaseConnection;
 using static Dapper.SqlMapper;
 
 namespace BuildWise.Repository.Product
 {
     public class ProductRepository : BaseRepository<Entities.Product>, IProductRepository
     {
-        private readonly IBaseConnection _conn;
+        private readonly IClientConnection _conn;
 
-        public ProductRepository(IBaseConnection conn) : base(conn.GetConnection(), conn.GetTransaction())
+        public ProductRepository(IClientConnection conn) : base(conn.GetConnection(), conn.GetTransaction())
         {
             _conn = conn;
         }

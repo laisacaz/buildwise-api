@@ -7,15 +7,16 @@ using BuildWise.Interfaces.Repository.Construction;
 using Dapper;
 using FastReport;
 using static BuildWise.Enum.SaleEnum;
+using static BuildWise.Interface.DbConnection.IBaseConnection;
 using static Dapper.SqlMapper;
 
 namespace BuildWise.Repository.Sale
 {
     public class SaleProductRepository : BaseRepository<SaleProduct>, ISaleProductRepository
     {
-        private readonly IBaseConnection _conn;
+        private readonly IClientConnection _conn;
         private readonly IUnitOfWork _uow;
-        public SaleProductRepository(IBaseConnection conn,
+        public SaleProductRepository(IClientConnection conn,
             IUnitOfWork uow) : base(conn.GetConnection(), conn.GetTransaction())
         {
             _conn = conn;

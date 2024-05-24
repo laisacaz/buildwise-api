@@ -3,6 +3,7 @@ using BuildWise.AutoMapper.Person;
 using BuildWise.AutoMapper.Product;
 using BuildWise.AutoMapper.Sale;
 using BuildWise.AutoMapper.ServiceOrder;
+using BuildWise.AutoMapper.User;
 using BuildWise.Services.Command.Product;
 
 namespace BuildWise.Installer
@@ -17,6 +18,7 @@ namespace BuildWise.Installer
             services.AddAutoMapper(typeof(ConstructionMap));
             services.AddAutoMapper(typeof(SaleMap));
             services.AddAutoMapper(typeof(ServiceOrderMap));
+            services.AddAutoMapper(typeof(UserMap));
         }
     }
 }
