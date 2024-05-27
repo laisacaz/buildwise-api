@@ -1,4 +1,5 @@
-﻿using BuildWise.DbConnection;
+﻿using BuildWise.Consts;
+using BuildWise.DbConnection;
 using BuildWise.ExceptionMiddleware;
 using BuildWise.Installer;
 using BuildWise.Interface.DbConnection;
@@ -12,9 +13,11 @@ using BuildWise.Repository.Person;
 using BuildWise.Repository.Product;
 using BuildWise.Repository.Sale;
 using BuildWise.Repository.ServiceOrder;
+using BuildWise.Repository.User;
 using BuildWise.Services.Service.Report;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 using Microsoft.OpenApi.Models;
+using static BuildWise.Interface.DbConnection.IBaseConnection;
 
 namespace BuildWise
 {
@@ -75,14 +78,30 @@ namespace BuildWise
             services.InstallAutoMapper();
             services.AddFluentValidationRulesToSwagger();
             DapperMapperInstaller.InstallDapperMappers();
-            services.AddScoped<IBaseConnection, PostgresConnection>();
+            services.AddScoped<IPublicConnection, PGPublicConnection>(serviceProvider =>
+            {
+                string connstring = serviceProvider
+                    .GetRequiredService<IConfiguration>()
+                    .GetConnectionString(ConnectionStrings.Postgres);
+                return new PGPublicConnection(connstring);
+            });
+            services.AddScoped<IClientConnection, PGClientConnection>(serviceProvider =>
+            {
+                string connstring = serviceProvider
+                    .GetRequiredService<IConfiguration>()
+                    .GetConnectionString(ConnectionStrings.Postgres);
+                return new PGClientConnection(connstring);
+            });
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IPublicUnitOfWork, PublicUnitOfWork>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IPersonRepository, PersonRepository>();
             services.AddScoped<Interfaces.Repository.Construction.IConstructionRepository, ConstructionRepository>();
             services.AddScoped<IReportService, OpenFastReportService>();
             services.AddScoped<Interfaces.Repository.Sale.ISaleRepository, SaleRepository>();
             services.AddScoped<Interfaces.Repository.ServiceOrder.IServiceOrderRepository, ServiceOrderRepository>();
+            services.AddScoped<Interfaces.Repository.User.IUserRepository, UserRepository>();
             services.InstallValidators();
         }
     }

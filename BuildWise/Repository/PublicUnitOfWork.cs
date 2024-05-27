@@ -1,5 +1,5 @@
 ﻿using BuildWise.Interfaces.Repository;
-using BuildWise.Interfaces.Repository.NovaPasta;
+using BuildWise.Interfaces.Repository.User;
 using BuildWise.Interfaces.Repository.Product;
 using System.Drawing;
 using static BuildWise.Interface.DbConnection.IBaseConnection;

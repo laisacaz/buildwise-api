@@ -1,4 +1,4 @@
-﻿using BuildWise.Interfaces.Repository.NovaPasta;
+﻿using BuildWise.Interfaces.Repository.User;
 using static BuildWise.Interface.DbConnection.IBaseConnection;
 
 namespace BuildWise.Repository.User

@@ -43,7 +43,6 @@
 
   <ItemGroup>
     <Folder Include="MiddlewareException\" />
-    <Folder Include="Services\Service\User\" />
     <Folder Include="Validator\Address\" />
   </ItemGroup>
 
