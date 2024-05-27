@@ -27,5 +27,12 @@ namespace BuildWise.Controller
             int id = await _mediator.Send(command);
             return Ok(id);
         }
+
+        [HttpGet]
+        [Route("")]
+        public async Task<ActionResult> GetById()
+        {
+
+        }
     }
 }
