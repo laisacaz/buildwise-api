@@ -1,7 +1,10 @@
-﻿using BuildWise.Payload.ServiceOrder;
+﻿using BuildWise.Entities;
+using BuildWise.Payload.ServiceOrder;
 using BuildWise.Payload.User;
 using BuildWise.Services.Command.Service;
 using BuildWise.Services.Command.User;
+using BuildWise.Services.Query.Product;
+using BuildWise.Services.Query.User;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,9 +33,12 @@ namespace BuildWise.Controller
 
         [HttpGet]
         [Route("")]
-        public async Task<ActionResult> GetById()
+        public async Task<ActionResult> GetById(
+            [FromBody] UserGetByIdPayload payload)
         {
-
+            UserGetByIdQuery query = new UserGetByIdQuery(payload);
+            Entities.User user = await _mediator.Send(query);
+            return Ok(user);
         }
     }
 }
