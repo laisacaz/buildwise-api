@@ -1,4 +1,5 @@
 ﻿using BuildWise.Interface.DbConnection;
+using BuildWise.Interfaces.Repository.Cashier;
 using BuildWise.Interfaces.Repository.Construction;
 using BuildWise.Interfaces.Repository.Person;
 using BuildWise.Interfaces.Repository.Product;
@@ -15,6 +16,7 @@ namespace BuildWise.Interfaces.Repository
         IConstructionRepository Construction { get; }
         ISaleRepository Sale { get; }
         IServiceOrderRepository ServiceOrder { get; }
+        ICashierRepository Cashier { get; }
         IClientConnection Conn { get; }
     }
 }

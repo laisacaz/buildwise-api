@@ -1,5 +1,6 @@
 ﻿using BuildWise.Interface.DbConnection;
 using BuildWise.Interfaces.Repository;
+using BuildWise.Interfaces.Repository.Cashier;
 using BuildWise.Interfaces.Repository.Construction;
 using BuildWise.Interfaces.Repository.Person;
 using BuildWise.Interfaces.Repository.Product;
@@ -26,6 +27,7 @@ namespace BuildWise.Repository
         public IConstructionRepository Construction => _serviceProvider.GetRequiredService<IConstructionRepository>();
         public ISaleRepository Sale => _serviceProvider.GetRequiredService<ISaleRepository>();
         public IServiceOrderRepository ServiceOrder => _serviceProvider.GetRequiredService<IServiceOrderRepository>();
+        public ICashierRepository Cashier => _serviceProvider.GetRequiredService<ICashierRepository>();
 
         public IClientConnection Conn => _conn;
         public void Dispose()
