@@ -8,6 +8,7 @@ using BuildWise.Interfaces.Repository.Person;
 using BuildWise.Interfaces.Repository.Product;
 using BuildWise.Interfaces.Service.Report;
 using BuildWise.Repository;
+using BuildWise.Repository.Cashier;
 using BuildWise.Repository.Construction;
 using BuildWise.Repository.Person;
 using BuildWise.Repository.Product;
@@ -102,6 +103,7 @@ namespace BuildWise
             services.AddScoped<Interfaces.Repository.Sale.ISaleRepository, SaleRepository>();
             services.AddScoped<Interfaces.Repository.ServiceOrder.IServiceOrderRepository, ServiceOrderRepository>();
             services.AddScoped<Interfaces.Repository.User.IUserRepository, UserRepository>();
+            services.AddScoped<Interfaces.Repository.Cashier.ICashierRepository, CashierRepository>();
             services.InstallValidators();
         }
     }

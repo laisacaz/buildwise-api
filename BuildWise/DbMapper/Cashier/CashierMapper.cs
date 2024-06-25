@@ -6,7 +6,7 @@ namespace BuildWise.DbMapper.Cashier
     {
         public CashierMapper()
         {
-            ToTable("con_construction");
+            ToTable("ca_cashier");
             Map(x => x.Id)
                 .ToColumn("id", false)
                 .IsKey();

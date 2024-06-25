@@ -1,4 +1,5 @@
-﻿using BuildWise.AutoMapper.Construction;
+﻿using BuildWise.AutoMapper.Cashier;
+using BuildWise.AutoMapper.Construction;
 using BuildWise.AutoMapper.Person;
 using BuildWise.AutoMapper.Product;
 using BuildWise.AutoMapper.Sale;
@@ -19,6 +20,7 @@ namespace BuildWise.Installer
             services.AddAutoMapper(typeof(SaleMap));
             services.AddAutoMapper(typeof(ServiceOrderMap));
             services.AddAutoMapper(typeof(UserMap));
+            services.AddAutoMapper(typeof(CashierMap));
         }
     }
 }

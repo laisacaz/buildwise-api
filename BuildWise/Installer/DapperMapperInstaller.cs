@@ -1,4 +1,5 @@
-﻿using BuildWise.DbMapper.Construction;
+﻿using BuildWise.DbMapper.Cashier;
+using BuildWise.DbMapper.Construction;
 using BuildWise.DbMapper.Person;
 using BuildWise.DbMapper.Sale;
 using BuildWise.DbMapper.Service;
@@ -23,6 +24,7 @@ namespace BuildWise.Installer
                 config.AddMap(new SaleMapper());
                 config.AddMap(new ServiceOrderMapper());
                 config.AddMap(new UserMapper());
+                config.AddMap(new CashierMapper());
                 config.ForDommel();
             });
 
