@@ -6,7 +6,8 @@
         {
             SaleByDate,
             Sale,
-            ProductRanking
+            ProductRanking,
+            Cashier
         }
     }
 }

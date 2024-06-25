@@ -6,7 +6,7 @@ using BuildWise.Payload.Report;
 using FluentValidation;
 using MediatR;
 
-namespace BuildWise.Services.Query.Report
+namespace BuildWise.Services.Query.Sale
 {
     public class SaleByDateQuery : IRequest<List<SaleByDateDTO>>
     {
@@ -31,7 +31,7 @@ namespace BuildWise.Services.Query.Report
             List<SaleByDateDTO> sales = await _uow.Sale.GetAllByDate(
                 request.Payload.StartDate,
                 request.Payload.EndDate);
-          
+
             return sales;
         }
     }

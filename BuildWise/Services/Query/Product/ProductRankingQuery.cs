@@ -2,13 +2,13 @@
 using BuildWise.Interfaces.Repository;
 using MediatR;
 
-namespace BuildWise.Services.Query.Report
+namespace BuildWise.Services.Query.Product
 {
     public class ProductRankingQuery : IRequest<List<ProductRankingDTO>>
     {
         public ProductRankingQuery()
         {
-            
+
         }
     }
     internal class ProductRankingQueryHandler : IRequestHandler<ProductRankingQuery, List<ProductRankingDTO>>
@@ -23,7 +23,7 @@ namespace BuildWise.Services.Query.Report
         {
             List<ProductRankingDTO> products = await _uow.Sale.Product.GetRankingProducts();
 
-            foreach(ProductRankingDTO product in products)
+            foreach (ProductRankingDTO product in products)
             {
                 product.Total = product.SaledTimes * product.Price;
             }

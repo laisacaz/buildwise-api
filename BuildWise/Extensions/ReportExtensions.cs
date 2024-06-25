@@ -12,6 +12,7 @@ namespace BuildWise.Extensions
                 EReportType.SaleByDate => Path.Combine("Sale", "SaleByDate"),
                 EReportType.ProductRanking => Path.Combine("Product", "ProductRanking"),
                 EReportType.Sale => Path.Combine("Sale", "Sale"),
+                EReportType.Cashier => Path.Combine("Cashier", "Cashier"),
 
                 _ => throw new System.NotImplementedException()
             };

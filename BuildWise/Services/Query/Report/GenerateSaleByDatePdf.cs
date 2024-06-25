@@ -1,6 +1,7 @@
 ﻿using BuildWise.DTO.Report;
 using BuildWise.Interfaces.Service.Report;
 using BuildWise.Payload.Report;
+using BuildWise.Services.Query.Sale;
 using MediatR;
 using static BuildWise.Enums.ReportEnum;
 

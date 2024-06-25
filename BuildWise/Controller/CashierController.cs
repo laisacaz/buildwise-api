@@ -1,8 +1,11 @@
 ﻿using BuildWise.DTO.Cashier;
+using BuildWise.DTO.Report;
 using BuildWise.Payload.Cashier;
+using BuildWise.Payload.Report;
 using BuildWise.Services.Command.Cashier;
 using BuildWise.Services.Command.Construction;
 using BuildWise.Services.Query.Cashier;
+using BuildWise.Services.Query.Report;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -57,6 +60,16 @@ namespace BuildWise.Controller
             CashierCheckLastCashierQuery query = new CashierCheckLastCashierQuery();
             CashierSimpleDTO dto = await _mediator.Send(query);
             return Ok(dto);
+        }
+
+        [HttpGet]
+        [Route("report/{id:int}")]
+        public async Task<ActionResult<PdfDTO>> Report(
+        [FromRoute(Name = "id")] int cashierId)
+        {
+            GenerateCashierPdfQuery query = new GenerateCashierPdfQuery(cashierId);
+            PdfDTO dto = await _mediator.Send(query);
+            return File(dto.Content, dto.ContentType, dto.FileName);
         }
     }
 }
