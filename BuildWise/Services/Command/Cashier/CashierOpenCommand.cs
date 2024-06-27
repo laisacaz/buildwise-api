@@ -41,6 +41,7 @@ namespace BuildWise.Services.Command.Cashier
 
             Entities.Cashier cashier = _mapper.Map<Entities.Cashier>(request.Payload);
             cashier.CreatedAt = DateTime.UtcNow;
+            cashier.AmountAvailable = request.Payload.InitialValue;
             cashier.Status = true;
             int id = await _uow.Cashier.InsertAsync(cashier);
 

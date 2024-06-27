@@ -8,5 +8,9 @@
         public bool Status { get; set; }
         public decimal InitialValue { get; set; }
         public decimal? ClosureValue { get; set; }
+        public decimal? AmountAvailable { get; set; }
+        public decimal? Outs { get; set; }
+        public decimal? Entries { get; set; }
+
     }
 }

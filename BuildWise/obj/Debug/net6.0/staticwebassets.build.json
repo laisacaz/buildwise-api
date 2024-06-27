@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ykJHaCOQjz8PzTbuCshzWegEUxprfXeBBwKBA8RvnF8=",
+  "Hash": "xJ7MHKHRbkkjjD52wVNAS00aJuVgqbWYlBzr158iiYI=",
   "Source": "BuildWise",
   "BasePath": "_content/BuildWise",
   "Mode": "Default",
@@ -1154,6 +1154,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Report\\FastReport\\Sale\\SaleByDate.frx"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\Desktop\\tcc\\BuildWise-back\\BuildWise\\wwwroot\\Report\\FastReport\\ServiceOrder\\ServiceOrderRanking.frx",
+      "SourceId": "BuildWise",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\Desktop\\tcc\\BuildWise-back\\BuildWise\\wwwroot\\",
+      "BasePath": "_content/BuildWise",
+      "RelativePath": "Report/FastReport/ServiceOrder/ServiceOrderRanking.frx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Report\\FastReport\\ServiceOrder\\ServiceOrderRanking.frx"
     }
   ]
 }

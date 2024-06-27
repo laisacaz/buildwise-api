@@ -64,6 +64,22 @@ namespace BuildWise.Services.Query.Cashier
                 ESaleReceivementMethod.Money);
             
             dto.OpeningDate = FromUTCToTimezone(cashier); 
+            dto.Values.AmountAvailable = cashier.AmountAvailable;
+            dto.Values.Entries = cashier.Entries;
+            dto.Values.Outs = cashier.Outs;
+            if(dto.Values.Money < 0 || dto.Values.Money is null)
+            {
+                dto.Values.Money = 0;
+            }
+            if (cashier.Entries < 0 || cashier.Entries is null)
+            {
+                cashier.Entries = 0;
+            }
+            if (cashier.Outs < 0 || cashier.Outs is null)
+            {
+                cashier.Outs = 0;
+            }
+            dto.Values.Money = (dto.Values.Money + cashier.Entries + cashier.InitialValue) - cashier.Outs;
 
             return dto;
         }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="CSharp" ReportInfo.Created="11/15/2023 00:33:37" ReportInfo.Modified="12/08/2023 17:29:48" ReportInfo.CreatorVersion="2023.3.11.0">
+<Report ScriptLanguage="CSharp" ReportInfo.Created="11/15/2023 00:33:37" ReportInfo.Modified="06/27/2024 00:09:08" ReportInfo.CreatorVersion="2023.3.11.0">
   <Dictionary>
-    <JsonDataSourceConnection Name="Connection" ConnectionString="rijcmlq2Mabczac38/76VDx6ZcEHmr+XXYnNs7ivEd6wlWMWFeYh0Vg2guUn7+wBIEvz3JIWDvQy6eQROqaZvEfvPWk9hXsK3t4mALocHqnXXL/o/XOWlXMmocNPje75bO5zsxR/XfYy5TkDoDei/uM/9LCsGdhjAVMq5cKym2MyiGAnFoKuSrSkr5RxSQUsWOa7cntEjUxxXVOynwP0ckgtV71imnTQAEGMBNWS5hBx/iVLw019vYImVnFvht7NXpP6OV6XdJCkJ83ZOVmkSwGjp3+F0Uj124ihq9kD5eLr4v38EbojXLsxDuA/8HcZSzowUiRTyKVbalKvpEd39EwjcHThhlmpGLoaYZpjwfUcc5JR5uhrbmA32Gfi+T1w4ZYindsmBRSoDARNyas6L41aVcRQ10fojWPUVmc+wEYmXQyjxdJSp5tmMMaMlAYhvN6iekARdmZ3h7ZGhf0goOXG5mhLxYrH66m9wvbF3oeiuR0QlknvjHvZclnNWOcsuYM05Y3rN2Z8hOSekpXlnSy2F49y5wE+C6/cZp+/xOlOj7C0Bsw0o1batkIpmW3f8php2e244SYH+3IlZODYUxHcYURqEGCPe7pI651S9kyhIOKuCB9Lo2wEwmdlGaauSfUvZKQZ2dgpi5iSmQt8cQPzou0oakLQk24j2EVt//8FSvEveuJJVOJNJy7Rr4SfwqLxdYbaQje/GevWj9LQHZ8RAmouND+6NaYEwtuTufT5yv4/aEBW6GNP73lR2BzKsgjijVoxJvdrxDvF310BXAQ1dhvaitEJKSBbATkGCCNdrE6qahSUPgk3jen/OYO7OZVWL9yOeVl3pXYLcqQXSPUmvNf1kkvvgjkaFSh9uL5b/GHvgkWNm3zFtKUEm6pTmbvzOVt1k/DFXgzSf1IbjIWaqWsQpqw4ffGpZxowkSC7q2JIxBpGcEPVu/ATTqoq9XYl8fXA1eX49JuQucSrnky2z+fpb0oK6RTKSMGbSemWWKwCb6Cg4vSdhhcUIp267nnAkSyf4E4Q7R6pnRexa93+DeckNqs4FOesuXfvSukdvlsK/LLM3vXmGJ0fzw/MvxRZjqBOuyFiYFx4o0mzDyf+vC6yxNlDrpzwrxTe+BCx0xdp+VYc4BZuUkwI0WM5XCzgL+qvGxo8dLn05FDd2I+7TPe97qWoaVBRigRNzFd0czhKPUAR/8XrtI1gEdYA2QbkmvIbTHNLryw9zD+fB3yQPaVWAbRzwxGvo7EWEv75k3GezGGCwA6yq7csx3Sd7fvjF75LMDLXCE00MIogUiGIvTKOAwO8fY6huyO8sJSRvdfL5nV9bRUsLb7AKbOd0rw49LXl30pz9foAjVG9nK4m9ICHT3oMDvk/JkN6ATWn/TAvnnSuWtgwTWG1l9PVbtKm7cSpNhMryh/3QevUawbEjb13wagOuX0eRLLcY4JWBa9iYFNQZlSuFqX8Xd9owuW1kNX89lpihrzQ00iYn11QtYy/vz6HUIyWDabw0fM9REbFcO8ihTHt+IYjQRH79g4QbXorhLqVe0thHHCluFMiielfcQPGYDxcrZN0bsP/ysce7WE9nlyjEMTXgFQndJ6QWGwSUdXTY+WBqUtxsv1ukW09NHP0vRexxgio+oZUr7EUSg7Z178wHRlPl0uNU82fSwOWdw2v5E6CJ9QEOWMUaUPE+B3FlHkiPjkTHHIrZmcJQ0OHHqOm4HLLi4M5SMiLWtkB/t3LI9u4YyIKosi3f5eSdxszh4KnanR9XmQa7afElw0RhjuD4Dxwcbnko5hYOPsUmmGgPWMQs2WOrGOhD6vUgcPrxAAabH6eRlF1UdTTeieFC9hjdNC7xg3/fc0oQ2HXmui3QBFtmdxT/lDql3FnEBAb2qNPP/qkQ9n37MNRNdsemT1FqIq84ZVLSQc5C8kJkBg8jhYdOYTqiPSA3mE3vflOZRJtqnNzZTw2kV/zE8ZO7OBm6g2ViGgX9nvr5ZenkDwlZPBmrp6a/AVmRD4cVHHFuPZFQ/jvkTTcc6wD3ZYuFv2PAUtUspJs9Jc1irZq1c8Km6bLPrqnJWT/Lfkc1lkZKz77Af1kLITzH6LUIWJKFy8sm6ROTExsu6hvw+dlte6k4qCk5WZ44K/QV1UwbmvqullJDbjeRNCM7XaJmp9XGobbGhcWEYbPjalz1PntYILzNzCrliJqWdaeAFJuJAD4Hrp02N+OPg9WA9FmzXhX1cJePdUN3dVzzDgKa/K0zCDRGRaLrVTwqhDSK0eUJxuIzbJxGElnWuxeg8ji7WZPK4O/Wv0ReKJSz+1LAn0QUL610G+clq4bgqSjnU/tSgZYJYjewJBm1B2fV05JcZwXkvrhD+KrFV8qp4ZtM1nw+OMhWZzcItyOCw0EM8Zpxo2G6aJifeMYNhc7HEiluacmMIg2frF4A16oL9wFdyXGdO6jZjVsAuDrQRvMccVROCs6pzBnTNk69izN13ja9y4EJoeT7Gn9gzCEkTHttJSuDtco+tthUZ7KqyXbE2tTEtaT6IAfXY+Xq/0Jn6u/chaXg9zC0fnQBqvbtlOv5J3nVPOnMW4Fywy3qiGghBGXXoUvKvIL9GrqzAvdU8fi32dQPt+QE8+dD1cKHP/hPinTZ0evOXoAfmgQh8oBFh+s/etQEplU6O1icj01n+1udQJkoQVcTXLHB06J/yOqHrPZFXsFZq/BT8bb0URii4Rm+7qTZjQkgInmKeR5lSyfeRnkmFaLWaRnQAugtZlwFtW6nieMjFitukri5RvGkuTiW7U3xyIUxZrBu7J9SFu8DM+7e/hG7FCf6VKjv2vZU38hh58cQi4R7zQXl9Ln7mjEoyF8iyJpae2/P3NLKgS+zo0XlJtIsjUZUmvkE27C66qWpw4DUhqubzLBmwt16zVP71chkPbgWcjfExZ2rDdN6F/Tf3vcub2/dyR1oa2eS6/P95sWNKAFihQpYmW2tI65BI8Lq5a2QpHTGblAbJ9L3HG18KUN54KMkDbgFoMkeANSErbs5mbdh6vaB4l6VFZU/fh/R5ylZTLElN6znYyd7OfWn0cQLG4U5wIwXvhc1NlgRj/f5W9wCsa21/YsgrZF7WOWjeSiD24DjBJ6SjS7DYvwukKwFoGfPJasukItjZnN+9RtVYXR4ucU2dVZOILtMH1xsDdPfwO+oFW5ITE7Rs0Fazpfvqq5Tqb6BBxAYLdSz3lXAQnoWQcQCYmxkLxA9N/gyc1KvwfkyE2SmHpbK1JebrlpZULUaQbYea40a8qGr/uSQvrDmlElUyaLAAH3FgaERZ1qATgT7Kwi8ukT9oeMnhE4iiM5WuAmALdGHIiJKctQ3c5ogH2oLzOhzLxgFv34psJmOp/19GLHO04QeZErhHH5fmppzsiTVWzQMuFrX+qTxyH86arq7B8rbS0SDbZoOA101EdDVnXl5uuCpVHZxA7LfbEHB1p8olPcL2OzqNMp6ACnIVqJlFOOLCv7JFy4RGduGGG2dfIxB+nKSEIpfNr/i0nrxB4qVijnPbZ">
+    <JsonDataSourceConnection Name="Connection" ConnectionString="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">
       <JsonTableDataSource Name="JSON" DataType="FastReport.Utils.Json.JsonArray" Enabled="true" TableName="JSON">
         <Column Name="index" DataType="System.Int32"/>
         <Column Name="item" DataType="FastReport.JsonBase">
@@ -15,7 +15,7 @@
           </Column>
           <Column Name="construction" DataType="FastReport.JsonBase">
             <Column Name="id" DataType="System.Double"/>
-            <Column Name="createdAt" DataType="System.DateTime"/>
+            <Column Name="createdAt" DataType="System.String"/>
             <Column Name="clientId" DataType="System.Double"/>
             <Column Name="client" DataType="FastReport.JsonBase">
               <Column Name="id" DataType="System.Double"/>
@@ -61,6 +61,17 @@
             </Column>
             <Column Name="array" DataType="FastReport.JsonBase"/>
           </JsonTableDataSource>
+          <JsonTableDataSource Name="services" DataType="FastReport.JsonBase" Enabled="true">
+            <Column Name="index" DataType="System.Int32"/>
+            <Column Name="item" DataType="FastReport.JsonBase">
+              <Column Name="id" DataType="System.Double"/>
+              <Column Name="serviceId" DataType="System.Double"/>
+              <Column Name="description" DataType="System.String"/>
+              <Column Name="stockQuantitySale" DataType="System.Double"/>
+              <Column Name="price" DataType="System.Double"/>
+            </Column>
+            <Column Name="array" DataType="FastReport.JsonBase"/>
+          </JsonTableDataSource>
         </Column>
         <Column Name="array" DataType="FastReport.JsonBase"/>
       </JsonTableDataSource>
@@ -71,10 +82,10 @@
   <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
     <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8" Border.Lines="Bottom">
       <TextObject Name="Text14" Top="9.45" Width="330.75" Height="18.9" Text="Comprovante de venda" Font="Arial, 12pt, style=Bold"/>
-      <TextObject Name="Text4" Left="476.15" Top="7" Width="107.95" Height="18.9" Text="Data cadastro:" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
-      <TextObject Name="Text67" Left="585.9" Top="7" Width="132.3" Height="18.9" Text="[JSON.item.sale.createdAt]" Format="Date" Format.Format="d" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text4" Left="491.15" Top="7" Width="107.95" Height="18.9" Text="Data cadastro:" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text67" Left="599.9" Top="7" Width="116.3" Height="18.9" Text="[JSON.item.sale.createdAt]" Format="Date" Format.Format="d" VertAlign="Center" Font="Arial, 10pt"/>
     </ReportTitleBand>
-    <PageHeaderBand Name="PageHeader1" Top="40.47" Width="718.2" Height="75.6" Border.Lines="Bottom">
+    <PageHeaderBand Name="PageHeader1" Top="40.09" Width="718.2" Height="75.6" Border.Lines="Bottom">
       <TextObject Name="Text3" Left="343.2" Top="9.45" Width="308.4" Height="12.9" Text="Vendedor" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
       <TextObject Name="Text5" Top="55.15" Width="64.6" Height="12.9" Text="Nº Obra:" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
       <TextObject Name="Text7" Top="9.45" Width="313.1" Height="12.9" Text="Cliente" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
@@ -84,7 +95,7 @@
       <TextObject Name="Text54" Left="66.6" Top="55.15" Width="94.5" Height="12.9" Text="[JSON.item.construction.id]" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text55" Left="281.95" Top="55.15" Width="113.4" Height="12.9" Text="[JSON.item.sale.id]" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
     </PageHeaderBand>
-    <DataBand Name="Data3" Top="118.73" Width="718.2" Height="47.25">
+    <DataBand Name="Data3" Top="117.97" Width="718.2" Height="47.25">
       <TextObject Name="Text52" Width="90.5" Height="18.9" Text="Produtos" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
       <TextObject Name="Text56" Top="28.35" Width="90.5" Height="18.9" Text="Cód barras" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
       <TextObject Name="Text57" Left="94.5" Top="28.35" Width="118.85" Height="18.9" Text="Referência" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
@@ -92,14 +103,25 @@
       <TextObject Name="Text59" Left="519.75" Top="28.35" Width="90.5" Height="18.9" Text="Qtde." HorzAlign="Right" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
       <TextObject Name="Text60" Left="614.25" Top="28.35" Width="109.4" Height="18.9" Text="Valor unitário" HorzAlign="Right" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
     </DataBand>
-    <DataBand Name="Data1" Top="168.65" Width="718.2" Height="23.46" DataSource="products">
+    <DataBand Name="Data1" Top="167.51" Width="718.2" Height="23.46" DataSource="products">
       <TextObject Name="Text61" Left="217.35" Width="292.95" Height="18.9" Text="[JSON.item.products.item.description]" Font="Arial, 10pt"/>
       <TextObject Name="Text62" Left="614.25" Width="109.4" Height="18.9" Text="[JSON.item.products.item.price]" Format="Number" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text63" Left="94.5" Width="122.85" Height="18.9" Text="[JSON.item.products.item.reference]" Font="Arial, 10pt"/>
       <TextObject Name="Text64" Left="519.75" Width="90.5" Height="18.9" Text="[JSON.item.products.item.stockQuantitySale]" Format="Number" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text68" Width="94.5" Height="18.9" Text="[JSON.item.products.item.barCode]" Font="Arial, 10pt"/>
     </DataBand>
-    <DataBand Name="Data2" Top="194.78" Width="718.2" Height="141.75" Border.Lines="Top" DataSource="JSON">
+    <DataBand Name="Data4" Top="193.25" Width="718.2" Height="47.25">
+      <TextObject Name="Text81" Top="28.35" Width="515.75" Height="18.9" Text="Descrição" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text82" Left="519.75" Top="28.35" Width="90.5" Height="18.9" Text="Qtde." HorzAlign="Right" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text83" Left="614.25" Top="28.35" Width="109.4" Height="18.9" Text="Valor unitário" HorzAlign="Right" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text78" Width="90.5" Height="18.9" Text="Serviços" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </DataBand>
+    <DataBand Name="Data5" Top="242.79" Width="718.2" Height="37.8" DataSource="services">
+      <TextObject Name="Text84" Width="519.75" Height="18.9" Text="[JSON.item.services.item.description]" Font="Arial, 10pt"/>
+      <TextObject Name="Text85" Left="515.75" Width="94.5" Height="18.9" Text="[JSON.item.services.item.stockQuantitySale]" Format="Number" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text86" Left="614.25" Width="109.4" Height="18.9" Text="[JSON.item.services.item.price]" Format="Number" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+    </DataBand>
+    <DataBand Name="Data2" Top="282.87" Width="718.2" Height="141.75" Border.Lines="Top" DataSource="JSON">
       <TextObject Name="Text65" Left="519.75" Width="90.5" Height="18.9" Text="[QtdeTotal]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="1" HorzAlign="Right" Font="Arial, 10pt, style=Bold"/>
       <TextObject Name="Text66" Left="614.25" Width="109.4" Height="18.9" Text="[ValorTotal]" Format="Currency" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.CurrencySymbol="R$" Format.PositivePattern="2" Format.NegativePattern="9" HorzAlign="Right" Font="Arial, 10pt, style=Bold"/>
       <TextObject Name="Text69" Top="37.8" Width="95.75" Height="12.9" Text="Recebimento" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
@@ -112,6 +134,6 @@
       <TextObject Name="Text76" Left="98.95" Top="85.05" Width="103.95" Height="12.9" Text="[JSON.item.sale.discount]" Format="Number" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text77" Left="98.95" Top="122.85" Width="103.95" Height="12.9" Text="[JSON.item.sale.total]" Format="Number" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
     </DataBand>
-    <PageFooterBand Name="PageFooter1" Top="339.19" Width="718.2" Height="18.9"/>
+    <PageFooterBand Name="PageFooter1" Top="426.91" Width="718.2" Height="18.9"/>
   </ReportPage>
 </Report>

@@ -27,6 +27,15 @@ namespace BuildWise.Controller
         }
 
         [HttpGet]
+        [Route("service-ranking")]
+        public async Task<ActionResult<PdfDTO>> ServiceRanking()
+        {
+            GenerateServiceRankingQueryPdf query = new GenerateServiceRankingQueryPdf();
+            PdfDTO dto = await _mediator.Send(query);
+            return File(dto.Content, dto.ContentType, dto.FileName);
+        }
+
+        [HttpGet]
         [Route("sale-by-period")]
         public async Task<ActionResult<PdfDTO>> SaleByPeriod(
             [FromQuery] SaleByDateReportPayload payload)

@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\Report\\FastReport\\Sale\\SaleByDate.frx"
     },
     {
+      "Id": "C:\\Users\\Usuario\\Desktop\\tcc\\BuildWise-back\\BuildWise\\wwwroot\\Report\\FastReport\\ServiceOrder\\ServiceOrderRanking.frx",
+      "PackagePath": "staticwebassets\\Report\\FastReport\\ServiceOrder\\ServiceOrderRanking.frx"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\Desktop\\tcc\\BuildWise-back\\BuildWise\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

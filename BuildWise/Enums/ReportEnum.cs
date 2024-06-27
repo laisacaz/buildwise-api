@@ -7,7 +7,8 @@
             SaleByDate,
             Sale,
             ProductRanking,
-            Cashier
+            Cashier,
+            ServiceOrderRanking
         }
     }
 }

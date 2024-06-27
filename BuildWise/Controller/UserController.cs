@@ -4,6 +4,7 @@ using BuildWise.Payload.User;
 using BuildWise.Services.Command.Service;
 using BuildWise.Services.Command.User;
 using BuildWise.Services.Query.Product;
+using BuildWise.Services.Query.User;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,14 +31,14 @@ namespace BuildWise.Controller
             return Ok(id);
         }
 
-        //[HttpGet]
-        //[Route("")]
-        //public async Task<ActionResult> GetById(
-        //    [FromBody] UserGetByIdPayload payload)
-        //{
-        //    UserGetByIdQuery query = new UserGetByIdQuery(payload);
-        //    Entities.User user = await _mediator.Send(query);
-        //    return Ok(user);
-        //}
+        [HttpPost]
+        [Route("signin")]
+        public async Task<ActionResult> Signin(
+            [FromBody] UserSigninPayload payload)
+        {
+            UserSigninQuery query = new UserSigninQuery(payload);
+            Entities.User? user = await _mediator.Send(query);
+            return Ok(user);
+        }
     }
 }

@@ -51,6 +51,7 @@ namespace BuildWise.Installer
             services.AddScoped<IValidator<ServiceOrderGetByIdPayload>, ServiceOrderGetByIdPayloadValidator>();          
             services.AddScoped<IValidator<ServiceOrderDeletePayload>, ServiceOrderDeletePayloadValidator>();          
             services.AddScoped<IValidator<UserInsertPayload>, UserInsertPayloadValidator>();            
+            services.AddScoped<IValidator<UserSigninPayload>, UserSigninPayloadValidator>();            
         }
     }
 }

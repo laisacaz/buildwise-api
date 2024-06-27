@@ -42,6 +42,26 @@ namespace BuildWise.Controller
             await _mediator.Send(command);
             return Ok();
         }
+        [HttpPut]
+        [Route("entry/{id:int}")]
+        public async Task<ActionResult> Entry(
+            [FromRoute(Name = "id")] int cashierId,
+            [FromBody] CashierEntryPayload payload)
+        {
+            CashierEntryCommand command = new CashierEntryCommand(cashierId, payload);
+            await _mediator.Send(command);
+            return Ok();
+        }
+        [HttpPut]
+        [Route("out/{id:int}")]
+        public async Task<ActionResult> Out(
+           [FromRoute(Name = "id")] int cashierId,
+           [FromBody] CashierOutPayload payload)
+        {
+            CashierOutCommand command = new CashierOutCommand(cashierId, payload);
+            await _mediator.Send(command);
+            return Ok();
+        }
 
         [HttpGet]
         [Route("{id:int}")]

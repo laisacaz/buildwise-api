@@ -16,6 +16,9 @@ namespace BuildWise.DbMapper.Cashier
             Map(x => x.Status).ToColumn("status", false);
             Map(x => x.InitialValue).ToColumn("initial_value", false);
             Map(x => x.ClosureValue).ToColumn("closure_value", false);
+            Map(x => x.AmountAvailable).ToColumn("actual_money", false);
+            Map(x => x.Outs).ToColumn("out", false);
+            Map(x => x.Entries).ToColumn("entry", false);
         }
     }
 }

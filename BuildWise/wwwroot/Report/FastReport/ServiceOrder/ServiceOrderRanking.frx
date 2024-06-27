@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="11/15/2023 00:33:37" ReportInfo.Modified="06/27/2024 01:16:17" ReportInfo.CreatorVersion="2023.3.11.0">
+  <Dictionary>
+    <JsonDataSourceConnection Name="Connection" ConnectionString="rijcmlqdfhj0ASbDZD90R+/xkNp820pjIxsNENDzgaFWOFa9bMYMnO9CX2sVoyp4WaKQh8rm821idZPm0yEFwdsC9esDCfaaL6tLVu8N9bzYxXzapCuonvqfW44BtaLIqUW73Pab6sEzw2ovfVCiNwGGn0lnZWkYupwm6K4lIYv7jxB62ocYw5aqCq2vWGQn3SyM/M3nMMVcVTGNi5IlrkkX8bkNc66kbt51mx3wPQ2OCyYuRmkuA5lJtd3CVWuIAvySykDtdSyKqh5Bkp4o06NNXk0AeDgi4SAskneZSqvhrGuUx4SCgmPtVrVpxl0lX0rQAh/heqezM4enAi055qnKK+YaK1Z0C7oOgzJBI6NfS2PgHDKAFE5GSURF0/op3X/1WleIuegFCkEygdOKGp7zMpUuCXuNaI9jm7eLRySE2nrJDpB7GSi7r1PWLYf+GflUMWrWR2HXoHeU74L5hJ8Sv4v5bDq+nsBWAL1i5aEM05pUFBUchrsaXBiQRY3HDjRKaJKcUWQrwPE2foXx9a1sIFR2KaWLbpjwJb094NoNuFlyULBdRonkbDMeOXy2jmV4/a/T9hfHSGrBrJ4ydEHQS8qq+naDeyLAFQulHl3WSFQGNuL3xJQSbu66ORWeR8pQbrUzcwAQ4a8SLrqFGO/rSPPcBAeiPbvbtuw1K7TIP/bLJcCKHnquel4k7yHcQ44Ckr4g8/O6BctsQISm6Lx30A+VGVZRtLn+qUN9K7HtT7mdBTRlt1dqhmccjxA6LaQuFHNYmdiin4/0ci/qR38qGl6k8upOx8qns15/NuFBlt4QIgZlkqXIvXeaAMyJ8f3z7bTdUWsOlO5n0cNIKHYNMCDUXeSdIfPodlERB82n9lXHlTI5ndcaM8ttoI83QK65yxZyfR55tlztH05jt+FBazpe+W+M548b39zL1mH0hvvJWDyofyBGC1yyc6rShaC36OmZuhGULZecU50nILguAaRYliGbkjxyaWkQfcNTQEaiv/z4QqkozCvgbtv1FPW3pFHtRfRldmsgACB/nUpTUfh/GYD6uz0UqaabqTtDd3/jsKy39llS71MPPC/gqTfZ+poAcmIjhRPxkQgv3wqjIVWNUBNXVOwAZ9dcmKeHY19Bc8yggNgVCg5ivuyrhe1dQmk">
+      <JsonTableDataSource Name="JSON" DataType="FastReport.Utils.Json.JsonArray" Enabled="true" TableName="JSON">
+        <Column Name="index" DataType="System.Int32"/>
+        <Column Name="item" DataType="FastReport.JsonBase">
+          <Column Name="id" DataType="System.Double"/>
+          <Column Name="description" DataType="System.String"/>
+          <Column Name="price" DataType="System.Double"/>
+          <Column Name="saledTimes" DataType="System.Double"/>
+          <Column Name="total" DataType="System.Double"/>
+        </Column>
+        <Column Name="array" DataType="FastReport.JsonBase"/>
+      </JsonTableDataSource>
+    </JsonDataSourceConnection>
+    <Total Name="TotalUn" Expression="[JSON.item.price]" Evaluator="Data1"/>
+    <Total Name="Total" Expression="[JSON.item.total]" Evaluator="Data1"/>
+    <Total Name="TotalQtdVendida" Expression="[JSON.item.saledTimes]" Evaluator="Data1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text14" Top="9.45" Width="330.75" Height="18.9" Text="Relatório de Ranking de serviços" Font="Arial, 12pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="40.09" Width="718.2" Height="28.35" Border.Lines="Bottom">
+      <TextObject Name="Text3" Left="33.6" Top="9.45" Width="296.5" Height="18.9" Text="Descrição" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text4" Left="338.2" Top="9.45" Width="103.95" Height="18.9" Text="Qtde. vendida" HorzAlign="Right" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text5" Left="526.2" Top="9.45" Width="82.5" Height="18.9" Text="Preço" HorzAlign="Right" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text6" Left="614.25" Top="9.45" Width="103.95" Height="18.9" Text="Valor total" HorzAlign="Right" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text43" Top="9.45" Width="33.35" Height="18.9" Text="#" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="70.72" Width="718.2" Height="23.46" DataSource="JSON">
+      <TextObject Name="Text11" Left="338.2" Top="4.56" Width="103.95" Height="18.9" Text="[JSON.item.saledTimes]" Format="Number" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text12" Left="526.2" Top="4.56" Width="82.5" Height="18.9" Text="[JSON.item.price]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="1" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text13" Left="614.25" Top="4.56" Width="103.95" Height="18.9" Text="[JSON.item.total]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="1" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text42" Top="4.56" Width="32.78" Height="18.9" Text="[Row#]" HorzAlign="Center" VertAlign="Center" Font="Arial, 8pt"/>
+      <TextObject Name="Text47" Left="33.6" Top="4.56" Width="302.4" Height="18.9" Text="[JSON.item.description]" Font="Arial, 10pt"/>
+    </DataBand>
+    <DataBand Name="Data2" Top="96.47" Width="718.2" Height="18.9" Border.Lines="Top">
+      <TextObject Name="Text15" Left="526.2" Width="82.5" Height="18.9" Text="[TotalUn]" Format="Currency" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.CurrencySymbol="R$" Format.PositivePattern="2" Format.NegativePattern="9" HorzAlign="Right" VertAlign="Center" Font="Arial, 11pt, style=Bold"/>
+      <TextObject Name="Text16" Left="614.25" Width="102.5" Height="18.9" Text="[Total]" Format="Currency" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.CurrencySymbol="R$" Format.PositivePattern="2" Format.NegativePattern="9" HorzAlign="Right" VertAlign="Center" Font="Arial, 11pt, style=Bold"/>
+      <TextObject Name="Text17" Left="338.2" Width="103.95" Height="18.9" Text="[TotalQtdVendida]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="1" HorzAlign="Right" VertAlign="Center" Font="Arial, 11pt, style=Bold"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="117.65" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

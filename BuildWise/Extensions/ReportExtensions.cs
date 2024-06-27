@@ -13,6 +13,7 @@ namespace BuildWise.Extensions
                 EReportType.ProductRanking => Path.Combine("Product", "ProductRanking"),
                 EReportType.Sale => Path.Combine("Sale", "Sale"),
                 EReportType.Cashier => Path.Combine("Cashier", "Cashier"),
+                EReportType.ServiceOrderRanking=> Path.Combine("ServiceOrder", "ServiceOrderRanking"),
 
                 _ => throw new System.NotImplementedException()
             };

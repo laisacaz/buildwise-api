@@ -7,7 +7,10 @@ namespace BuildWise.DTO.Cashier
     {
         public CashierGetValuesDTO()
         {
-            Values = new CashierReceivementMethodsDTO();
+            Values = new CashierReceivementMethodsDTO()
+            {
+                Money = 0,
+            };
         }
         public CashierReceivementMethodsDTO Values { get; set; }
         public DateTime OpeningDate { get; set; }   
