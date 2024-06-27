@@ -51,23 +51,31 @@ namespace BuildWise.Services.Command.Sale
                 // soma quantidade de produtos para ter total de itens
                 // pega todas as props do produto do banco para captura o preço
                 // faz calculo com o preço * qtd lançada na venda e acumula no subtotal
-                foreach(SaleProductInsertPayload product in request.Payload.Products)
+                
+                if(request.Payload.Products is not null)
                 {
-                    sale.TotalItems = sale.TotalItems + product.StockQuantity;
-                    Entities.Product fullProduct = await _uow.Product.GetByIdAsync(product.ProductId);
-                    sale.Subtotal = sale.Subtotal + (fullProduct.Price * product.StockQuantity);
+                    foreach (SaleProductInsertPayload product in request.Payload.Products)
+                    {
+                        sale.TotalItems = sale.TotalItems + product.StockQuantity;
+                        Entities.Product fullProduct = await _uow.Product.GetByIdAsync(product.ProductId);
+                        sale.Subtotal = sale.Subtotal + (fullProduct.Price * product.StockQuantity);
+                    }
                 }
-                foreach (SaleServiceOrderInsertPayload service in request.Payload.Services)
+               
+                if(request.Payload.Services is not null)
                 {
-                    sale.TotalItems = sale.TotalItems + service.StockQuantity;
-                    Entities.ServiceOrder fullServiceOrder = await _uow.ServiceOrder.GetByIdAsync(service.ServiceId);
-                    sale.Subtotal = sale.Subtotal + (fullServiceOrder.Price * service.StockQuantity);
+                    foreach (SaleServiceOrderInsertPayload service in request.Payload.Services)
+                    {
+                        sale.TotalItems = sale.TotalItems + service.StockQuantity;
+                        Entities.ServiceOrder fullServiceOrder = await _uow.ServiceOrder.GetByIdAsync(service.ServiceId);
+                        sale.Subtotal = sale.Subtotal + (fullServiceOrder.Price * service.StockQuantity);
+                    }
                 }
-
                 sale.Total = sale.Subtotal;
 
                 int saleId = await _uow.Sale.InsertAsync(sale);
-                
+
+            if (request.Payload.Products is not null) { 
                 // salva produtos na tabela de sale_product
                 foreach (SaleProductInsertPayload product in request.Payload.Products)
                 {
@@ -76,6 +84,9 @@ namespace BuildWise.Services.Command.Sale
                     productMap.SaleId = saleId;
                     await _uow.Sale.Product.InsertAsync(productMap);
                 }
+            }
+
+            if (request.Payload.Services is not null) { 
                 foreach (SaleServiceOrderInsertPayload service in request.Payload.Services)
                 {
                     SaleServiceOrder serviceMap = _mapper.Map<SaleServiceOrder>(service);
@@ -83,6 +94,7 @@ namespace BuildWise.Services.Command.Sale
                     serviceMap.SaleId = saleId;
                     await _uow.Sale.ServiceOrder.InsertAsync(serviceMap);
                 }
+            }
             return saleId;
         }
     }

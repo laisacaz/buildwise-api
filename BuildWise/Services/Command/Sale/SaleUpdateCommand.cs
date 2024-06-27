@@ -86,14 +86,14 @@ namespace BuildWise.Services.Command.Sale
             foreach(SaleServiceOrderDTO service in existingServices)
             {
                 SaleServiceOrderUpdatePayload? serviceStillAdded = request.Payload.Services.Where(
-                    x => x.ServiceId == service.ServiceOrderId).FirstOrDefault();
+                    x => x.ServiceId == service.ServiceId).FirstOrDefault();
 
                 if(serviceStillAdded is null)
                 {
                     SaleServiceOrder toBeDeleted = new()
                     {
                         Id = service.Id,
-                        ServiceOrderId = service.ServiceOrderId,
+                        ServiceId = service.ServiceId,
                         StockQuantity = service.StockQuantitySale,                        
                     };
                     await _uow.Sale.ServiceOrder.DeleteAsync(toBeDeleted);
@@ -131,14 +131,14 @@ namespace BuildWise.Services.Command.Sale
                 // cria objeto com valores que vieram do payload
                 SaleServiceOrder serviceOrderMap = new SaleServiceOrder()
                 {
-                    ServiceOrderId = service.ServiceId,
+                    ServiceId = service.ServiceId,
                     StockQuantity = service.StockQuantity
                 };
                 Entities.ServiceOrder fullServiceOrder = await _uow.ServiceOrder.GetByIdAsync(service.ServiceId);
 
                 // verifica se ja foi adicionado
                 SaleServiceOrderDTO? serviceAlreadyAdded = existingServices.Where(
-                    x => x.ServiceOrderId == service.ServiceId).FirstOrDefault();
+                    x => x.ServiceId == service.ServiceId).FirstOrDefault();
 
                 // já foi adicionado
                 // no objeto criado lá em cima, vai adicionar o numero da venda e id do item antigo

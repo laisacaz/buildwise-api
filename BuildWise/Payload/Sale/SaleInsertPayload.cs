@@ -8,8 +8,8 @@ namespace BuildWise.Payload.Sale
         public int ClientId { get; set; }
         public int SellerId { get; set; }
         public int? ConstructionId { get; set; }
-        public List<SaleProductInsertPayload> Products { get; set; }
-        public List<SaleServiceOrderInsertPayload> Services { get; set; }
+        public List<SaleProductInsertPayload>? Products { get; set; }
+        public List<SaleServiceOrderInsertPayload>? Services { get; set; }
         public string? Observation { get; set; }
     }
 }

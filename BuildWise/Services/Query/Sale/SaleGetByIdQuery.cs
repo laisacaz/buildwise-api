@@ -82,13 +82,20 @@ namespace BuildWise.Services.Query.Sale
                     sale.Status,
                     request.Payload.Id);
 
+            // services
+
+            List<SaleServiceOrderDTO> services = await _uow.Sale.ServiceOrder.GetSaleFullServiceOrders(
+                sale.Status,
+                request.Payload.Id);
+
             SaleDTO dto = new SaleDTO
             {
                 Client = client,
                 Sale = saledto,
                 Construction = constructionDto,
                 Seller = seller,
-                Products = products
+                Products = products,
+                Services = services
             };
             return dto;
         }

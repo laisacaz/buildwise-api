@@ -11,5 +11,6 @@ namespace BuildWise.DTO.Sale
         public ConstructionDTO Construction { get; set; }
         public SaleRecordDTO Sale { get; set; } 
         public List<SaleProductDTO> Products { get; set; } 
+        public List<SaleServiceOrderDTO> Services { get; set; } 
     }
 }

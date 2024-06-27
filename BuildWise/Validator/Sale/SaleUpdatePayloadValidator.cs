@@ -100,8 +100,15 @@ namespace BuildWise.Validator.Sale
 
             RuleFor(x => x.Products)
                 .Must(products => products != null && products.Count > 0)
-                    .WithMessage("Você deve inserir no mínimo um produto para salvar a venda")
-                    .WithErrorCode("ME0028");
+                    .WithMessage("Você deve inserir no mínimo um produto ou serviço para salvar a venda")
+                    .WithErrorCode("ME0028")
+            .When(x => x.Services is not null && x.Services.Count > 0);
+
+            RuleFor(x => x.Services)
+                .Must(products => products != null && products.Count > 0)
+                    .WithMessage("Você deve inserir no mínimo um produto ou serviço para salvar a venda")
+                    .WithErrorCode("ME0028")
+            .When(x => x.Products is not null && x.Products.Count > 0);
 
             RuleForEach(x => x.Products)
                 .SetValidator(new SaleProductUpdatePayloadValidator(uow));

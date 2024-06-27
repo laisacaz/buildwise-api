@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\BuildWise.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Usuario\\Desktop\\tcc\\BuildWise-back\\BuildWise\\wwwroot\\Report\\FastReport\\Cashier\\Cashier.frx",
+      "PackagePath": "staticwebassets\\Report\\FastReport\\Cashier\\Cashier.frx"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\Desktop\\tcc\\BuildWise-back\\BuildWise\\wwwroot\\Report\\FastReport\\Product\\ProductRanking.frx",
       "PackagePath": "staticwebassets\\Report\\FastReport\\Product\\ProductRanking.frx"
     },
