@@ -2,7 +2,7 @@
 using BuildWise.Payload.Sale;
 using FluentValidation;
 
-namespace BuildWise.Validator.Product
+namespace BuildWise.Validator.Sale
 {
     public class SaleProductUpdatePayloadValidator : AbstractValidator<SaleProductUpdatePayload>
     {

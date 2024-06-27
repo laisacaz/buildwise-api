@@ -2,41 +2,40 @@
 using BuildWise.Payload.Sale;
 using FluentValidation;
 
-namespace BuildWise.Validator.Product
+namespace BuildWise.Validator.Sale
 {
-    public class SaleProductInsertPayloadValidator : AbstractValidator<SaleProductInsertPayload>
+    public class SaleServiceOrderUpdatePayloadValidator : AbstractValidator<SaleServiceOrderUpdatePayload>
     {
-        public SaleProductInsertPayloadValidator(IUnitOfWork uow)
+        public SaleServiceOrderUpdatePayloadValidator(IUnitOfWork uow)
         {
             CascadeMode = CascadeMode.Stop;
 
-            RuleFor(x => x.ProductId)
+            RuleFor(x => x.ServiceId)
                 .GreaterThan(0)
-                    .WithMessage("Produto deve existir")
+                    .WithMessage("Serviço deve existir")
                     .WithErrorCode("ME0009")
 
                 .MustAsync(async (payload, cod, context, cancellation) =>
                 {
-                    Entities.Product product = await uow.Product.GetByIdAsync(cod);
+                    Entities.ServiceOrder service = await uow.ServiceOrder.GetByIdAsync(cod);
 
-                    if (product == null)
+                    if (service == null)
                     {
                         return false;
                     }
-                    if (product.Status is false)
+                    if (service.Status is false)
                     {
                         return false;
                     }
                     return true;
                 })
-                    .WithMessage("Produto deve existir")
+                    .WithMessage("Serviço deve existir")
                     .WithErrorCode("ME0009");
-            
+
             RuleFor(x => x.StockQuantity)
                 .GreaterThan(0)
-                    .WithMessage("Quantidade do produto deve ser maior que zero")
+                    .WithMessage("Quantidade do serviço deve ser maior que zero")
                     .WithErrorCode("ME0028");
-
         }
     }
 }

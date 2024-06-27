@@ -82,6 +82,9 @@ namespace BuildWise.Validator.Sale
             RuleForEach(x => x.Products)
                 .SetValidator(new SaleProductInsertPayloadValidator(uow));
 
+            RuleForEach(x => x.Services)
+                .SetValidator(new SaleServiceOrderInsertPayloadValidator(uow));
+
             RuleFor(x => x.Observation)
                 .MaximumLength(200)
                     .WithMessage("Observação deve ter no máximo 200 caracteres")

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using BuildWise.AutoMapper.Product;
 using BuildWise.DTO.Product;
+using BuildWise.DTO.Sale;
 using BuildWise.Entities;
 using BuildWise.Extensions;
 using BuildWise.Interfaces.Repository;
@@ -53,7 +55,13 @@ namespace BuildWise.Services.Command.Sale
             sale.Status = ESaleStatus.Open;
             decimal totalPrice = 0;
 
+            // resultado da busca de produtos e serviços que estao vinculadas com a venda no banco
+            // utiliza do dto com varias props pois o sql eh usado no getbyid da venda para mostrar no data table
             List<SaleProductDTO> existingProducts = await _uow.Sale.Product.GetSaleFullProducts(
+                oldSale.Status,
+                request.Payload.GetId());
+
+            List<SaleServiceOrderDTO> existingServices = await _uow.Sale.ServiceOrder.GetSaleFullServiceOrders(
                 oldSale.Status,
                 request.Payload.GetId());
 
@@ -74,6 +82,22 @@ namespace BuildWise.Services.Command.Sale
                     await _uow.Sale.Product.DeleteAsync(toBeDeleted);
                 }
 
+            }
+            foreach(SaleServiceOrderDTO service in existingServices)
+            {
+                SaleServiceOrderUpdatePayload? serviceStillAdded = request.Payload.Services.Where(
+                    x => x.ServiceId == service.ServiceOrderId).FirstOrDefault();
+
+                if(serviceStillAdded is null)
+                {
+                    SaleServiceOrder toBeDeleted = new()
+                    {
+                        Id = service.Id,
+                        ServiceOrderId = service.ServiceOrderId,
+                        StockQuantity = service.StockQuantitySale,                        
+                    };
+                    await _uow.Sale.ServiceOrder.DeleteAsync(toBeDeleted);
+                }
             }
             // atualiza produto ou insere novo
             foreach (SaleProductUpdatePayload product in request.Payload.Products)
@@ -101,6 +125,40 @@ namespace BuildWise.Services.Command.Sale
                 }
                 totalPrice += fullProduct.Price * product.StockQuantity;
                 sale.TotalItems += product.StockQuantity;
+            }
+            foreach (SaleServiceOrderUpdatePayload service in request.Payload.Services)
+            {
+                // cria objeto com valores que vieram do payload
+                SaleServiceOrder serviceOrderMap = new SaleServiceOrder()
+                {
+                    ServiceOrderId = service.ServiceId,
+                    StockQuantity = service.StockQuantity
+                };
+                Entities.ServiceOrder fullServiceOrder = await _uow.ServiceOrder.GetByIdAsync(service.ServiceId);
+
+                // verifica se ja foi adicionado
+                SaleServiceOrderDTO? serviceAlreadyAdded = existingServices.Where(
+                    x => x.ServiceOrderId == service.ServiceId).FirstOrDefault();
+
+                // já foi adicionado
+                // no objeto criado lá em cima, vai adicionar o numero da venda e id do item antigo
+                // precisou passar esses valores para entao atualizar
+
+                if (serviceAlreadyAdded is not null)
+                {
+                    serviceOrderMap.SaleId = request.Payload.GetId();
+                    serviceOrderMap.Id = serviceAlreadyAdded.Id;
+                    await _uow.Sale.ServiceOrder.UpdateAsync(serviceOrderMap);
+                }
+                // caso contrario vai inserir um novo
+                else
+                {
+                    serviceOrderMap.CreatedAt = DateTime.UtcNow;
+                    serviceOrderMap.SaleId = request.Payload.GetId();
+                    await _uow.Sale.ServiceOrder.InsertAsync(serviceOrderMap);
+                }
+                totalPrice += fullServiceOrder.Price * service.StockQuantity;
+                sale.TotalItems += service.StockQuantity;
             }
             sale.Subtotal = totalPrice;
             sale.Total = sale.Subtotal;
