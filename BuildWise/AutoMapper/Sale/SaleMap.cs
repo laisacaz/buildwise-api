@@ -16,6 +16,9 @@ namespace BuildWise.AutoMapper.Sale
             CreateMap<SaleProductUpdatePayload, SaleProduct>();
             
             CreateMap<Entities.Sale, SaleRecordDTO>();
+
+            CreateMap<SaleServiceOrderInsertPayload, SaleServiceOrder>();
+            CreateMap<SaleServiceOrder, SaleServiceOrderInsertPayload>();
         }
     }
 }

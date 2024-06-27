@@ -4,6 +4,7 @@ using BuildWise.DbMapper.Person;
 using BuildWise.DbMapper.Sale;
 using BuildWise.DbMapper.Service;
 using BuildWise.DbMapper.User;
+using BuildWise.Entities;
 using BuildWise.Mapper.Product;
 using Dapper.FluentMap;
 using Dapper.FluentMap.Dommel;
@@ -25,6 +26,7 @@ namespace BuildWise.Installer
                 config.AddMap(new ServiceOrderMapper());
                 config.AddMap(new UserMapper());
                 config.AddMap(new CashierMapper());
+                config.AddMap(new SaleServiceOrderMapper());
                 config.ForDommel();
             });
 

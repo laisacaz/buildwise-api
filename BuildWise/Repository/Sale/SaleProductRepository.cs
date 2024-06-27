@@ -3,7 +3,7 @@ using BuildWise.DTO.Report.Product;
 using BuildWise.Entities;
 using BuildWise.Interface.DbConnection;
 using BuildWise.Interfaces.Repository;
-using BuildWise.Interfaces.Repository.Construction;
+using BuildWise.Interfaces.Repository.Sale;
 using Dapper;
 using FastReport;
 using static BuildWise.Enum.SaleEnum;

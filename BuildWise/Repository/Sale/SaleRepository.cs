@@ -6,7 +6,6 @@ using BuildWise.DTO.Sale;
 using BuildWise.Extensions;
 using BuildWise.Interface.DbConnection;
 using BuildWise.Interfaces.Repository;
-using BuildWise.Interfaces.Repository.Construction;
 using BuildWise.Interfaces.Repository.Sale;
 using BuildWise.Repository.Construction;
 using Dapper;
@@ -30,6 +29,7 @@ namespace BuildWise.Repository.Sale
             _uow = uow;
         }
         public ISaleProductRepository Product => new SaleProductRepository(_conn, _uow);
+        public ISaleServiceOrderRepository ServiceOrder => new SaleServiceOrderRepository(_conn, _uow);
 
         public async Task<SearchDTO<SalePagedSearchDTO>> PagedSearch(
             string? search,

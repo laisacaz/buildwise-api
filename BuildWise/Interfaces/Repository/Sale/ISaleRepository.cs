@@ -1,7 +1,6 @@
 ﻿using BuildWise.DTO.Sale;
 using BuildWise.DTO;
 using BuildWise.Interface.Repository;
-using BuildWise.Interfaces.Repository.Construction;
 using static BuildWise.Enum.SaleEnum;
 using BuildWise.DTO.Report.Sale;
 
@@ -10,6 +9,7 @@ namespace BuildWise.Interfaces.Repository.Sale
     public interface ISaleRepository : IBaseRepository<Entities.Sale>
     {
         ISaleProductRepository Product { get; } 
+        ISaleServiceOrderRepository ServiceOrder { get; }
         Task<SearchDTO<SalePagedSearchDTO>> PagedSearch(
             string? search,
             ESaleSearchType? searchType,
