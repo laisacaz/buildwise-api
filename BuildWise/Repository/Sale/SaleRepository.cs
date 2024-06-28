@@ -45,7 +45,7 @@ namespace BuildWise.Repository.Sale
                                     client.sale.id as Id,
                                     client.sale.created_at as CreatedAt,
                                     client.sale.status as Status,
-                                    client.sale.total as Total,
+                                    client.sale.subtotal as Total,
                                     client.pe_person.name as ClientName
                                 from client.sale";
 
@@ -74,7 +74,8 @@ namespace BuildWise.Repository.Sale
                 parameters.Add("status", status);
             }
 
-            string pagedSearchSql = @$"{columnSql} {whereSql} limit {limit} offset {offset}";
+            string orderBy = "order by client.sale.id desc";
+            string pagedSearchSql = @$"{columnSql} {whereSql} {orderBy} limit {limit} offset {offset}";
             string selectRecordCount = $"select count(client.sale.id) from client.sale {whereSql}";
 
             GridReader? results = await _conn.GetConnection().QueryMultipleAsync($"{pagedSearchSql}; {selectRecordCount}",

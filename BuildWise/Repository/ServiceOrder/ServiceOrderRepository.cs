@@ -42,9 +42,10 @@ namespace BuildWise.Repository.ServiceOrder
                 whereSql += " and public.unaccent(client.se_service.description) ILIKE public.unaccent(CONCAT('%', @search, '%'))";
                 parameters.Add("search", search);
             }
+            string orderBy = "order by  client.se_service.id desc";
             {
 
-                string pagedSearchSql = @$"{columnSql} {whereSql} limit {limit} offset {offset}";
+                string pagedSearchSql = @$"{columnSql} {whereSql} {orderBy} limit {limit} offset {offset}";
                 string selectRecordCount = $"select count(id) from client.se_service {whereSql}";
 
                 GridReader? results = await _conn.GetConnection().QueryMultipleAsync($"{pagedSearchSql}; {selectRecordCount}",

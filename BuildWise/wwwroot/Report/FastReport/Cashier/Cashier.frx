@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="CSharp" ReportInfo.Created="11/15/2023 00:33:37" ReportInfo.Modified="06/25/2024 20:46:50" ReportInfo.CreatorVersion="2023.3.11.0">
+<Report ScriptLanguage="CSharp" ReportInfo.Created="11/15/2023 00:33:37" ReportInfo.Modified="06/27/2024 21:22:28" ReportInfo.CreatorVersion="2023.3.11.0">
   <Dictionary>
-    <JsonDataSourceConnection Name="Connection" ConnectionString="rijcmlqD2gGPUHvEQrA0o2ooawmWpgfcBO6/jD5SWqbeCYAHRBIpKcg77pbItqj2qvd5MfqtBFVhYFBWU1KvuCD0qQCNPivTIyJHMYsyz/vOdnKS7uIC0Po66oPrABY0QXcZzZlkoiSDa1X4+A5iafL6fPdpLlZBU3CPIY3feulgufcdmcPDUkW4CdfEwzouJoOJA9oMx+QZuceTvGOOIIF05EhaUt+POc06Xqdbvcfot4gM98gxaXTf5nmdJ80KYDeXLjxTOAm6jsjygP+ZjDAjzPuR8mYpneBRXknCCDQQQxsMcW1cgXupvfXZKy/8MC1d8Nx9EB6QiLgCtO0lqUA1iHTzWZfNo8LFZPbFpMtCuBi2nhdbrq02mPi5rxejTHjzijRxNWVFQqkda4LKfFy4Oz+PDIjPsx9y7pWgVJAQmOFifaHLy0qBZdBTwYexxJ79GrD1b4erhjFds5WKeQB2gOZSHNSmGFphjQHqDA3Xj/AMFpBCnKuMaiVX9/FGbOTaoRlQpZ+yorDgszd9KZ+AZRZPcsG6X9Yj0LihcZNSgXrlaud3yGmMc/6y4hTyMNZySUlh+2T38F3IZE6WjQ6MklKPKcJwumPMkSiQv5rVHBoFwze/TxKBak/5VlDwFql8q2CbftM2f4sIq3xftpyjDyR5Bt740t9ZnGpFgIWwrg5/XOdTC5JA+A73rKKbA8CbSnEsXf3YYPUt2dld4mpdXBgBCwSg/SJJGAqtgzQnRzgGQ08CYQcr7s03TT2oiBLZvM814WS/FP5VXI/JLRZpW6+UkpHBNPQ7jNWdbsiHrRRD7aZXUXT/KML+Ns1m5MHcf63c6M+GcGuYtS8UsGo85GPFtBjz3JaCeQKkcxRrpisoRqDWBBqZzzMQqlAvlALxSQH">
+    <JsonDataSourceConnection Name="Connection" ConnectionString="rijcmlqD2gGPUHvEQrA0o2ooawmWpgfcBO6/jD5SWqbeCYAHRBIpKcg77pbItqj2qvd5MfqtBFVhYFBWU1KvuCD0qQCNPivTIyJHMYsyz/vOdnKS7uIC0Po66oPrABY0QXcZzZlkoiSDa1X4+A5iafL6fPdpLlZBU3CPIY3feulgufcdmcPDUkW4CdfEwzouJoOJA9oMx+QZuceTvGOOIIF05EhaUt+POc06Xqdbvcfot4gM98gxaXTf5nmdJ80KYDeXLjxTOAm6jsjygP+ZjDAjzPuR8mYpneBRXknCCDQQQxsMcW1cgXupvfXZKy/8MC1d8Nx9EB6QiLgCtO0lqUA1iHTzWZfNo8LFZPbFpMtCuBi2nhdbrq02mPi5rxejTHjzijRxNWVFQqkda4LKfFy4Oz+PDIjPsx9y7pWgVJAQmOFifaHLy0qBZdBTwYexxJ79GrD1b4erhjFds5WKeQB2gOZSHNSmGFphjQHqDA3Xj/AMFpBCnKuMaiVX9/FGbOTaoRlQpZ+yorDgszd9KZ+AZRZPcsG6X9Yj0LihcZNSgXrlaud3yGmMc/6y4hTyMNZySUlh+2T38F3IZE6WjQ6MklKPKcJwumPMkSiQv5rVHBoFwze/TxKBak/5VlDwFql8q2CbftM2f4sIq3xftpyjDyR5Bt740t9ZnGpFgIWwrg5/XOdTC5JA+A73rKKbA8CbSnEsXf3YYPUt2dld4mpdXBgBCwSg/SJJGAqtgzQnRzgGQ08CYQcr7s03TT2oiBLZvM814WS/FP5VXI/JLRZpW6+UkpHBNPQ7jNWdbsiHrRRD7aZXUXT/KML+Ns1m5MHcf63c6M+GcGuYtS8UsGo85GPFtBjz3JaCeQKkcxRrpisoRr3sCXIeyRiVd06ChDH5VPR">
       <JsonTableDataSource Name="JSON" DataType="FastReport.Utils.Json.JsonArray" Enabled="true" TableName="JSON">
         <Column Name="index" DataType="System.Int32"/>
         <Column Name="item" DataType="FastReport.JsonBase">
@@ -24,26 +24,33 @@
   <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
     <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8" Border.Lines="Bottom">
       <TextObject Name="Text14" Top="12.45" Width="330.75" Height="18.9" Text="Extrato de caixa" Font="Arial, 12pt, style=Bold"/>
-      <TextObject Name="Text4" Left="490.25" Top="10" Width="121.85" Height="18.9" Text="Data de abertura:" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
-      <TextObject Name="Text81" Left="613.9" Top="10" Width="94.5" Height="18.9" Text="[JSON.item.openingDate]" Format="Date" Format.Format="d" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text4" Left="490.25" Top="12.45" Width="121.85" Height="18.9" Text="Data de abertura:" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text81" Left="613.9" Top="12.45" Width="94.5" Height="18.9" Text="[JSON.item.openingDate]" Format="Date" Format.Format="d" VertAlign="Center" Font="Arial, 10pt"/>
     </ReportTitleBand>
-    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="245.7" Border.Lines="Bottom">
-      <TextObject Name="Text7" Top="9.45" Width="313.1" Height="12.9" Text="Recebimentos" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="226.8" Border.Lines="Bottom">
+      <TextObject Name="Text7" Top="9.45" Width="313.1" Height="12.9" Text="Recebimentos" VertAlign="Center" Font="Arial, 11pt, style=Bold"/>
       <TextObject Name="Text78" Top="47.25" Width="313.1" Height="12.9" Text="Pix" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
       <TextObject Name="Text79" Top="88.05" Width="313.1" Height="12.9" Text="Cartão de crédito" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
       <TextObject Name="Text80" Top="66.15" Width="292.95" Height="18.9" Text="[JSON.item.values.pix]" Format="Currency" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.CurrencySymbol="R$" Format.PositivePattern="2" Format.NegativePattern="9" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
-      <TextObject Name="Text82" Top="103.95" Width="226.8" Height="18.9" Text="[JSON.item.values.creditCard]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="1" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text82" Top="103.95" Width="226.8" Height="18.9" Text="[JSON.item.values.creditCard]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text83" Top="132.3" Width="313.1" Height="12.9" Text="Cartão de débito" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
-      <TextObject Name="Text84" Top="148.65" Width="226.8" Height="18.9" Text="[JSON.item.values.creditCard]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="1" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text84" Top="148.65" Width="226.8" Height="18.9" Text="[JSON.item.values.debitCard]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
       <TextObject Name="Text85" Top="177" Width="313.1" Height="12.9" Text="Dinheiro" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
-      <TextObject Name="Text86" Top="194.8" Width="226.8" Height="18.9" Text="[JSON.item.values.creditCard]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="1" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
-      <TextObject Name="Text89" Left="519.75" Top="177" Width="313.1" Height="12.9" Text="Saldo em caixa" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
-      <TextObject Name="Text90" Left="519.75" Top="194.8" Width="226.8" Height="18.9" Text="[JSON.item.values.creditCard]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="," Format.GroupSeparator="." Format.NegativePattern="1" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text86" Top="195.8" Width="226.8" Height="18.9" Text="[JSON.item.values.money]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
     </PageHeaderBand>
-    <DataBand Name="Data2" Top="291.5" Width="718.2" Height="103.95" Border.Lines="Top" DataSource="JSON">
-      <TextObject Name="Text87" Left="226.8" Top="37.8" Width="274.05" Height="18.9" Border.Lines="Bottom" VertAlign="Center" Font="Arial, 10pt"/>
-      <TextObject Name="Text88" Left="227.9" Top="56.7" Width="273.05" Height="18.9" Text="Assinatura" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    <DataBand Name="Data1" Top="272.6" Width="718.2" Height="160.65">
+      <TextObject Name="Text91" Top="9.45" Width="313.1" Height="12.9" Text="Movimentações" VertAlign="Center" Font="Arial, 11pt, style=Bold"/>
+      <TextObject Name="Text92" Top="37.8" Width="313.1" Height="12.9" Text="Entradas" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text93" Top="75.6" Width="313.1" Height="29.9" Text="Saídas" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text90" Left="529.2" Top="111.5" Width="226.8" Height="18.9" Text="[JSON.item.values.amountAvailable]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text89" Left="529.2" Top="92.6" Width="313.1" Height="12.9" Text="Saldo em caixa" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text94" Top="94.5" Width="226.8" Height="35.9" Text="[JSON.item.values.outs]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text95" Top="56.7" Width="226.8" Height="18.9" Text="[JSON.item.values.entries]" Format="Currency" Format.UseLocale="true" Format.DecimalDigits="2" VertAlign="Center" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
     </DataBand>
-    <PageFooterBand Name="PageFooter1" Top="399.45" Width="718.2" Height="18.9"/>
+    <DataBand Name="Data2" Top="437.25" Width="718.2" Height="103.95" Border.Lines="Top" DataSource="JSON">
+      <TextObject Name="Text87" Left="226.8" Top="59.8" Width="274.05" Height="18.9" Border.Lines="Bottom" VertAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text88" Left="227.9" Top="78.7" Width="273.05" Height="18.9" Text="Assinatura" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="545.2" Width="718.2" Height="18.9"/>
   </ReportPage>
 </Report>

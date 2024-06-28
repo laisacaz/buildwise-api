@@ -30,6 +30,10 @@ namespace BuildWise.Services.Command.Cashier
             Entities.Cashier oldCashier = await _uow.Cashier.GetByIdAsync(request.Payload.Id);
             if(oldCashier.AmountAvailable >= 0)
             {
+                if(oldCashier.Outs is null)
+                {
+                    oldCashier.Outs = 0;
+                }
                 oldCashier.Outs += request.Payload.Amount;
                 oldCashier.AmountAvailable -= request.Payload.Amount;
             }

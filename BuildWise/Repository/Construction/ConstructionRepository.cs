@@ -62,8 +62,8 @@ namespace BuildWise.Repository.Construction
                 parameters.Add("status", status);
 
             }
-
-            string pagedSearchSql = @$"{columnSql} {whereSql} limit {limit} offset {offset}";
+            string orderBy = "order by client.con_construction.id desc";
+            string pagedSearchSql = @$"{columnSql} {whereSql} {orderBy} limit {limit} offset {offset}";
             string selectRecordCount = $"select count(client.con_construction.id) from client.con_construction {whereSql}";
 
             GridReader? results = await _conn.GetConnection().QueryMultipleAsync($"{pagedSearchSql}; {selectRecordCount}",

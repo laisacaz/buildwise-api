@@ -1,4 +1,5 @@
-﻿using BuildWise.Payload.ServiceOrder;
+﻿using BuildWise.Extensions;
+using BuildWise.Payload.ServiceOrder;
 using BuildWise.Payload.User;
 using FluentValidation;
 
@@ -17,6 +18,9 @@ namespace BuildWise.Validator.User
                .NotNull()
                    .WithMessage("Informar email")
                    .WithErrorCode("ME0003")
+                .EmailAddress()
+                  .WithMessage("Formato de email inválido")
+                  .WithErrorCode("ME0011")
                .MaximumLength(60)
                    .WithMessage("Email deve ter no máximo 60 caracteres")
                    .WithErrorCode("ME0004");
@@ -52,7 +56,20 @@ namespace BuildWise.Validator.User
                     .WithErrorCode("ME0003")
                 .MaximumLength(14)
                     .WithMessage("CNPJ deve ter no máximo 14 caracteres")
-                    .WithErrorCode("ME0004");
+                    .WithErrorCode("ME0004")
+
+                .MustAsync(async (payload, cod, context, cancellation) =>
+                {
+                    bool isValid = ValidateExtensions.IsValidRegisteredNumber(payload.RegisteredNumber);
+
+                    if (isValid is false)
+                    {
+                        return false;
+                    }
+                    return true;
+                })
+                .WithMessage("CNPJ incorreto")
+                .WithErrorCode("ME0011");
         }
     }
 }

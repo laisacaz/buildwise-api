@@ -50,8 +50,8 @@ namespace BuildWise.Repository.Product
                 parameters.Add("search", search);
             }
             {
-
-                string pagedSearchSql = @$"{columnSql} {whereSql} limit {limit} offset {offset}";
+                string orderBy = "order by client.pro_product.id desc";
+                string pagedSearchSql = @$"{columnSql} {whereSql} {orderBy} limit {limit} offset {offset}";
                 string selectRecordCount = $"select count(id) from client.pro_product {whereSql}";
 
                 GridReader? results = await _conn.GetConnection().QueryMultipleAsync($"{pagedSearchSql}; {selectRecordCount}",
