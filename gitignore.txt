@@ -18,6 +18,29 @@ build/
 *.userosscache
 *.sln.docstates
 
+# Debug logs
+*.log
+*.bak
+*.swp
+
+# Nuget files
+project.lock.json
+.nuget/
+packages/
+
+
+# Configuration files
+*.pid
+*.svclog
+*.lock.json
+*.njsproj.user
+*.vscode/
+
+# Operational System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
 # User-specific files
 *.rsuser

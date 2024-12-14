@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\tcc\\BuildWise-back\\BuildWise\\BuildWise.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Buildwise\\buildwise-api\\BuildWise\\BuildWise.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\tcc\\BuildWise-back\\BuildWise\\BuildWise.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Buildwise\\buildwise-api\\BuildWise\\BuildWise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\tcc\\BuildWise-back\\BuildWise\\BuildWise.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Buildwise\\buildwise-api\\BuildWise\\BuildWise.csproj",
         "projectName": "BuildWise",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\tcc\\BuildWise-back\\BuildWise\\BuildWise.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Buildwise\\buildwise-api\\BuildWise\\BuildWise.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\tcc\\BuildWise-back\\BuildWise\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Buildwise\\buildwise-api\\BuildWise\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,6 +21,7 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Fast Reports\\.NET\\2024.2.20\\FastReport .NET Trial\\Nugets": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
