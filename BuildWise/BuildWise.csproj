@@ -7,9 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MiddlewareException\**" />
     <Compile Remove="Validator\Address\**" />
+    <Content Remove="MiddlewareException\**" />
     <Content Remove="Validator\Address\**" />
+    <EmbeddedResource Remove="MiddlewareException\**" />
     <EmbeddedResource Remove="Validator\Address\**" />
+    <None Remove="MiddlewareException\**" />
     <None Remove="Validator\Address\**" />
   </ItemGroup>
 
@@ -46,10 +50,6 @@
     <PackageReference Include="System.Reflection" Version="4.3.0" />
     <PackageReference Include="System.Runtime" Version="4.3.1" />
     <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="MiddlewareException\" />
   </ItemGroup>
 
 </Project>
