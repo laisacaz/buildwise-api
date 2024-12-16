@@ -8,13 +8,13 @@
 
   <ItemGroup>
     <Compile Remove="MiddlewareException\**" />
-    <Compile Remove="Validator\Address\**" />
+    <Compile Remove="Validators\Address\**" />
     <Content Remove="MiddlewareException\**" />
-    <Content Remove="Validator\Address\**" />
+    <Content Remove="Validators\Address\**" />
     <EmbeddedResource Remove="MiddlewareException\**" />
-    <EmbeddedResource Remove="Validator\Address\**" />
+    <EmbeddedResource Remove="Validators\Address\**" />
     <None Remove="MiddlewareException\**" />
-    <None Remove="Validator\Address\**" />
+    <None Remove="Validators\Address\**" />
   </ItemGroup>
 
   <ItemGroup>
